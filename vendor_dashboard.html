@@ -15,8 +15,8 @@
   <body>
     <div class="sidebar open">
       <div class="logo-details">
-        <i class="bx bxl-c-plus-plus icon"></i>
         <div class="logo_name">ICV System</div>
+        <i class="bx bx-menu" id="btn"></i>
       </div>
       <ul class="nav-list">
         <li>
@@ -49,22 +49,42 @@
         </li>
         <li class="profile">
           <div class="profile-details">
-            <i class="bx bx-buildings" id="log_out"></i>
-            <div class="name_id">
+            <div class="name_job">
               <div class="name">Company Name</div>
-              <div class="id">Vendor ID</div>
+              <div class="job">ID 007</div>
             </div>
           </div>
+          <i class="bx bx-buildings" id="log_out"><a href="index.html"></a></i>
         </li>
       </ul>
     </div>
-    <section class="home-section">
-      <div class="container" style="padding-top: 20px;">
-            <div class="card">
-              <h2>Dashboard</h2>
-            
-             
+<script>
 
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
+
+</script>
+
+    <section class="home-section">
+      <div class="text">Dashboard</div>
+      <div class="container">
+            <div class="card">
                 <div class="card-body">
                     <div class="container">
                       <div class="row">
@@ -72,11 +92,11 @@
                           <div class="card mb-4" style="background-color: #F7D117;">
                           <div class="card-body">
                           
-                        <h4 id="myId" style="display: none">No Quarter Available</h4>
-                        <h4 id="Q01" style="display: none">Quarter 1</h4>
-                        <h4 id="Q02" style="display: none">Quarter 2 is now active. Please fill in the form before 22nd July 2023.</h3>
-                        <h4 id="Q03" style="display: none">Quarter 3</h4>
-                        <h4 id="Q04" style="display: none">Quarter 4</h4>
+                        <h5 id="myId" style="display: none">No Quarter Available</h5>
+                        <h5 id="Q01" style="display: none">Quarter 1</h5>
+                        <h5 id="Q02" style="display: none">Quarter 2 is now active. Please fill in the form before 22nd July 2023.</h5>
+                        <h5 id="Q03" style="display: none">Quarter 3</h5>
+                        <h5 id="Q04" style="display: none">Quarter 4</h5>
                           </div>
                         </div>
                         </div>
@@ -206,7 +226,7 @@
                               <h3 class="mb-0">Contracts</h3>
                               <hr>
             <br>
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -237,7 +257,7 @@
                         <div class="card-body">
                     <h3>Previous Data Entries</h3>
                     <br>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-responsive">
                       <thead>
                         <tr>
                           <th scope="col">#</th>
