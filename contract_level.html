@@ -33,17 +33,17 @@
         </li>
         <li>
           <a href="company_level.html">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Company Level</span>
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Company Level Form</span>
           </a>
-          <span class="tooltip">Company Level</span>
+          <span class="tooltip">Company Level Form</span>
         </li>
         <li>
           <a href="contract_level.html" style="background-color:#dddddd;">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Contract Level</span>
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Contract Level Form</span>
           </a>
-          <span class="tooltip">Contract Level</span>
+          <span class="tooltip">Contract Level Form</span>
         </li>
         <li>
           <a href="index.html">
@@ -92,11 +92,11 @@ function menuBtnChange() {
       <div class="container">
         <div class="card">
           
-          <h3 id="myId" style="display: none">No Quarter Available</h3>
-          <h3 id="Q01" style="display: none">Quarter 1</h3>
-          <h3 id="Q02" style="display: none">Quarter 2</h3>
-          <h3 id="Q03" style="display: none">Quarter 3</h3>
-          <h3 id="Q04" style="display: none">Quarter 4</h3>
+          <h3 id="myId" style="display: none; text-align: center;">No Quarter Available</h3>
+          <h3 id="Q01" style="display: none; text-align: center;">Quarter 1</h3>
+          <h3 id="Q02" style="display: none; text-align: center;">Quarter 2</h3>
+          <h3 id="Q03" style="display: none; text-align: center;">Quarter 3</h3>
+          <h3 id="Q04" style="display: none; text-align: center;">Quarter 4</h3>
          
           <h3>Contract Title: <select class="form-select" aria-label="Default select example">
             <option selected disabled>Select Contract </option>
@@ -255,41 +255,43 @@ function menuBtnChange() {
             <label for="first"> Existing Management </label>
               <div class="content"><br>
                   <!--  Bootstrap table-->
-                      <table class="table table-responsive table-bordered table-fixed" id="mgt_table">
-                          <thead>
-                            <tr>
-                              <th hidden>#</th>
-                                <th>Job Position</th>
-                                <th>Local</th>
-                                <th>Non-Local</th>
-                                <th>SAWP</th>
-                                <th>Total</th>
-                                <th>% Local</th>
-                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">+</button></th>
-                              </tr>
-                          </thead>
-                          <tbody id="mbody">
-                            <tr>
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="force_table">
+                        <thead>
+                          <tr>
+                            <th hidden>#</th>
+                              <th style="width: 30%;">Job Position</th>
+                              <th>Local</th>
+                              <th>Non-Local</th>
+                              <th>SAWP</th>
+                              <th>Total</th>
+                              <th>% Local</th>
+                            <th><button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">+</button></th>
                             </tr>
-                            <tr id="mrow" class="d-none">
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
-                              <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelManagement(this)"><i class="fa fa-trash"></i></button></td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        </thead>
+                        <tbody id="mbody">
+                          <tr>
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
+                          </tr>
+                          <tr id="mrow" class="d-none">
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
+                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelManagement(this)"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
       </div>
       </li>
                 <script>
@@ -355,41 +357,43 @@ function menuBtnChange() {
       <label for="second"> Existing Supervisor </label>
         <div class="content"><br>
                   <!--  Bootstrap table-->
-                      <table class="table-responsive table table-bordered" id="table2">
-                          <thead>
-                            <tr>
-                              <th scope="col" hidden>#</th>
-                                <th scope="col">Job Position</th>
-                                <th scope="col">Local</th>
-                                <th scope="col">Non-Local</th>
-                                <th scope="col">SAWP</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">% Local</th>
-                                <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">+</button></th>
-                              </tr>
-                          </thead>
-                          <tbody id="sbody">
-                            <tr>
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="force_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" hidden>#</th>
+                              <th style="width: 30%;">Job Position</th>
+                              <th scope="col">Local</th>
+                              <th scope="col">Non-Local</th>
+                              <th scope="col">SAWP</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">% Local</th>
+                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">+</button></th>
                             </tr>
-                            <tr id="srow" class="d-none">
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
-                              <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSupervisor(this)"><i class="fa fa-trash"></i></button></td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        </thead>
+                        <tbody id="sbody">
+                          <tr>
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
+                          </tr>
+                          <tr id="srow" class="d-none">
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
+                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSupervisor(this)"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
                     </div>
                   </li>
       
@@ -452,41 +456,43 @@ function menuBtnChange() {
             <label for="third"> Existing Skilled </label>
               <div class="content"><br>
                   <!--  Bootstrap table-->
-                      <table class="table-responsive table table-bordered" id="table3">
-                          <thead>
-                            <tr>
-                              <th scope="col" hidden>#</th>
-                                <th scope="col">Job Position</th>
-                                <th scope="col">Local</th>
-                                <th scope="col">Non-Local</th>
-                                <th scope="col">SAWP</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">% Local</th>
-                                <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">+</button></th>
-                              </tr>
-                          </thead>
-                          <tbody id="skbody">
-                            <tr>
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="force_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" hidden>#</th>
+                              <th style="width: 30%;">Job Position</th>
+                              <th scope="col">Local</th>
+                              <th scope="col">Non-Local</th>
+                              <th scope="col">SAWP</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">% Local</th>
+                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">+</button></th>
                             </tr>
-                            <tr id="skrow" class="d-none">
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
-                              <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSkilled(this)"><i class="fa fa-trash"></i></button></td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        </thead>
+                        <tbody id="skbody">
+                          <tr>
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
+                          </tr>
+                          <tr id="skrow" class="d-none">
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
+                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSkilled(this)"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
                     </div>
                   </li>
                       <script>
@@ -548,41 +554,43 @@ function menuBtnChange() {
             <label for="fourth"> Existing Non-Skilled </label>
               <div class="content"><br>
                   <!--  Bootstrap table-->
-                      <table class="table-responsive table table-bordered" id="table4">
-                          <thead>
-                            <tr>
-                              <th scope="col" hidden>#</th>
-                                <th scope="col">Job Position</th>
-                                <th scope="col">Local</th>
-                                <th scope="col">Non-Local</th>
-                                <th scope="col">SAWP</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">% Local</th>
-                                <th><button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">+</button></th>
-                              </tr>
-                          </thead>
-                          <tbody id="nskbody">
-                            <tr>
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="force_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" hidden>#</th>
+                              <th style="width: 30%;">Job Position</th>
+                              <th scope="col">Local</th>
+                              <th scope="col">Non-Local</th>
+                              <th scope="col">SAWP</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">% Local</th>
+                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">+</button></th>
                             </tr>
-                            <tr id="nskrow" class="d-none">
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
-                              <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelNonSkilled(this)"><i class="fa fa-trash"></i></button></td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        </thead>
+                        <tbody id="nskbody">
+                          <tr>
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
+                          </tr>
+                          <tr id="nskrow" class="d-none">
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
+                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelNonSkilled(this)"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
                     </div>
                   </li>
                       <script>
@@ -644,41 +652,43 @@ function menuBtnChange() {
             <label for="fifth"> Existing Admin & Account </label>
               <div class="content"><br>
                   <!--  Bootstrap table-->
-                      <table class="table-responsive table table-bordered" id="table5">
-                          <thead>
-                            <tr>
-                              <th scope="col" hidden>#</th>
-                                <th scope="col">Job Position</th>
-                                <th scope="col">Local</th>
-                                <th scope="col">Non-Local</th>
-                                <th scope="col">SAWP</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">% Local</th>
-                                <th><button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">+</button></th>
-                              </tr>
-                          </thead>
-                          <tbody id="aabody">
-                            <tr>
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="force_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" hidden>#</th>
+                              <th style="width: 30%;">Job Position</th>
+                              <th scope="col">Local</th>
+                              <th scope="col">Non-Local</th>
+                              <th scope="col">SAWP</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">% Local</th>
+                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">+</button></th>
                             </tr>
-                            <tr id="aarow" class="d-none">
-                              <th scope="row" hidden>1</th>
-                                <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
-                              <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
-                              <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelAdmAcc(this)"><i class="fa fa-trash"></i></button></td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        </thead>
+                        <tbody id="aabody">
+                          <tr>
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
+                          </tr>
+                          <tr id="aarow" class="d-none">
+                            <th scope="row" hidden>1</th>
+                              <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
+                            <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
+                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelAdmAcc(this)"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
                     </div>
                   </li>
                       <script>
@@ -1005,26 +1015,28 @@ function menuBtnChange() {
             <div class="content">
                   <p class="mb-0">Breakdown of Local Leavers This Year</p>
                     <!--  Bootstrap table-->
-                    <table class="table table-bordered table-responsive">
-                      <thead>
-                        <tr>
-                          <th scope="col">Resign</th>
-                          <th scope="col">Terminate</th>
-                          <th scope="col">Transfer</th>
-                          <th scope="col">Others</th>
-                          <th scope="col">Total</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                            <td><input type="number" class="form-control shadow-none" name="localresign" id="resign" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localterminate" id="terminate" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localtransfer" id="transfer" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localothers" id="others" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localleavers" id="totallocalleave" value="0" disabled></td>
-                        </tr>
-                      </tbody>
-                      </table>
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="leavers_table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Resign</th>
+                            <th scope="col">Terminate</th>
+                            <th scope="col">Transfer</th>
+                            <th scope="col">Others</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td><input type="number" class="form-control shadow-none" name="localresign" id="resign" onkeyup="Calc10(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="localterminate" id="terminate" onkeyup="Calc10(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="localtransfer" id="transfer" onkeyup="Calc10(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="localothers" id="others" onkeyup="Calc10(this);"></td>
+                            <td><input type="number" class="form-control shadow-none" name="localleavers" id="totallocalleave" value="0" disabled></td>
+                          </tr>
+                        </tbody>
+                        </table>
+                      </div>
         
                     <!-- Add rows button-->
                     <div class="text-right">
@@ -1059,27 +1071,28 @@ function menuBtnChange() {
             <div class="content">
                 <p class="mb-0">Breakdown of Non-Local Leavers This Year</p>
                   <!--  Bootstrap table-->
-                  <table class="table table-bordered table-responsive">
-                    <thead>
-                      <tr>
-                        <th scope="col">Resign</th>
-                        <th scope="col">Terminate</th>
-                        <th scope="col">Transfer</th>
-                        <th scope="col">Others</th>
-                        <th scope="col">Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalresign" id="resign" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalterminate" id="terminate" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocaltransfer" id="transfer" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalothers" id="others" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalleavers" id="totalnonlocalleave" value="0" disabled></td>
-                      </tr>
-                    </tbody>
-                    </table>
-      
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="leavers_table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Resign</th>
+                          <th scope="col">Terminate</th>
+                          <th scope="col">Transfer</th>
+                          <th scope="col">Others</th>
+                          <th scope="col">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="number" class="form-control shadow-none" name="nonlocalresign" id="resign" onkeyup="Calc11(this);"></td>
+                          <td><input type="number" class="form-control shadow-none" name="nonlocalterminate" id="terminate" onkeyup="Calc11(this);"></td>
+                          <td><input type="number" class="form-control shadow-none" name="nonlocaltransfer" id="transfer" onkeyup="Calc11(this);"></td>
+                          <td><input type="number" class="form-control shadow-none" name="nonlocalothers" id="others" onkeyup="Calc11(this);"></td>
+                          <td><input type="number" class="form-control shadow-none" name="nonlocalleavers" id="totalnonlocalleave" value="0" disabled></td>
+                        </tr>
+                      </tbody>
+                      </table>
+                    </div>
                   <!-- Add rows button-->
                   <div class="text-right">
                   <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1134,45 +1147,46 @@ function menuBtnChange() {
           <label for="tenth"> Employment </label>
             <div class="content">
             <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered">
-                    <thead>
-                      <tr>
-                          <th scope="col">EMPLOYMENT</th>
-                          <th scope="col">Spend in Brunei (BND $)</th>
-                          <th scope="col">Spend out Brunei (BND $)</th>
-                          <th scope="col">Total Spend (BND $)</th>
-                          <th scope="col">% Spend in Brunei</th>
-                          <th scope="col" hidden>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Local Employment</th>
-                          <td><input type="number" class="form-control shadow-none" name="local_spendin" id="localspendin" onkeyup="Calc12(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="local_spendout" id="localspendout" onkeyup="Calc12(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="total_localemp" id="totallocalemp" disabled ></td>
-                        <td><input type="number" class="form-control shadow-none" name="pct_localemp" id="pctlocalemp" disabled></td>
-                        <td hidden><input type="date" class="form-control shadow-none" name="date_localemp" id="datelocalemp"></td>
+            <div class="table-responsive">
+              <table class="table table-bordered" id="content_table">
+                  <thead>
+                    <tr>
+                        <th scope="col">EMPLOYMENT</th>
+                        <th scope="col">Spend in Brunei (BND $)</th>
+                        <th scope="col">Spend out Brunei (BND $)</th>
+                        <th scope="col">Total Spend (BND $)</th>
+                        <th scope="col">% Spend in Brunei</th>
+                        <th scope="col" hidden>Date</th>
                       </tr>
-                      <tr>
-                        <th scope="row">Non Local Employment</th>
-                          <td><input type="number" class="form-control shadow-none" name="nonlocal_spendin" id="nonlocalspendin" onkeyup="Calc13(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocal_spendout" id="nonlocalspendout"  onkeyup="Calc13(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="total_nonlocalemp" id="totalnonlocalemp" disabled></td>
-                        <td><input type="number" class="form-control shadow-none" name="pct_nonlocalemp" id="pctnonlocalemp" disabled></td>
-                        <td hidden><input type="date" class="form-control shadow-none" name="date_nonlocalemp" id="datenonlocalemp"></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">EMPLOYMENT TOTAL</th>
-                          <td><input type="number" class="form-control shadow-none" name="total_emp_spendin" id="totalempspendin" disabled></td>
-                        <td><input type="number" class="form-control shadow-none" name="total_emp_spendout" id="totalempspendout" disabled></td>
-                        <td><input type="number" class="form-control shadow-none" name="total_emp_spend" id="totalempspend" disabled></td>
-                        <td><input type="number" class="form-control shadow-none" name="pct_spendin" id="pctspendin" disabled></td>
-                        <td hidden><input type="date" class="form-control shadow-none" name="date_total_emp" id="datetotalemp"></td>
-                      </tr>
-                    </tbody>
-                </table>
-
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Local Employment</th>
+                        <td><input type="number" class="form-control shadow-none" name="local_spendin" id="localspendin" onkeyup="Calc12(this);"></td>
+                      <td><input type="number" class="form-control shadow-none" name="local_spendout" id="localspendout" onkeyup="Calc12(this);"></td>
+                      <td><input type="number" class="form-control shadow-none" name="total_localemp" id="totallocalemp" disabled ></td>
+                      <td><input type="number" class="form-control shadow-none" name="pct_localemp" id="pctlocalemp" disabled></td>
+                      <td hidden><input type="date" class="form-control shadow-none" name="date_localemp" id="datelocalemp"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Non Local Employment</th>
+                        <td><input type="number" class="form-control shadow-none" name="nonlocal_spendin" id="nonlocalspendin" onkeyup="Calc13(this);"></td>
+                      <td><input type="number" class="form-control shadow-none" name="nonlocal_spendout" id="nonlocalspendout"  onkeyup="Calc13(this);"></td>
+                      <td><input type="number" class="form-control shadow-none" name="total_nonlocalemp" id="totalnonlocalemp" disabled></td>
+                      <td><input type="number" class="form-control shadow-none" name="pct_nonlocalemp" id="pctnonlocalemp" disabled></td>
+                      <td hidden><input type="date" class="form-control shadow-none" name="date_nonlocalemp" id="datenonlocalemp"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">EMPLOYMENT TOTAL</th>
+                        <td><input type="number" class="form-control shadow-none" name="total_emp_spendin" id="totalempspendin" disabled></td>
+                      <td><input type="number" class="form-control shadow-none" name="total_emp_spendout" id="totalempspendout" disabled></td>
+                      <td><input type="number" class="form-control shadow-none" name="total_emp_spend" id="totalempspend" disabled></td>
+                      <td><input type="number" class="form-control shadow-none" name="pct_spendin" id="pctspendin" disabled></td>
+                      <td hidden><input type="date" class="form-control shadow-none" name="date_total_emp" id="datetotalemp"></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
             <!-- Submit button-->
             <div class="text-right">
             <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1229,24 +1243,25 @@ function menuBtnChange() {
           <label for="eleventh"> Training </label>
             <div class="content">
               <!--  Bootstrap table-->
-              <table class="table-responsive table table-bordered"  style="margin: 8px auto; width: 90%;">
-                <tr>
-                  <th rowspan="2" class="align-middle">TRAINING</th>
-                  <td>Spend in Brunei (BND)</td>
-                  <td>Spend out Brunei (BND)</td>
-                  <td>Total Spend (BND)</td>
-                  <td>% Spend in Brunei</td>
-                  <td hidden>Date</td>
-                </tr>
-                <tr>
-                  <td><input type="number" class="form-control shadow-none" name="train_spendin" id="trainspendin" onkeyup="Calc14(this);"></td>
-                  <td><input type="number" class="form-control shadow-none" name="train_spendout" id="trainspendout" onkeyup="Calc14(this);"></td>
-                  <td><input type="number" class="form-control shadow-none" name="total_training" id="totaltraining" disabled></td>
-                  <td><input type="number" class="form-control shadow-none" name="pct_training" id="pcttraining" disabled></td>
-                  <td hidden><input type="date" class="form-control shadow-none" name="date_emp" id="date_emp"></td>
-                </tr>
-              </table>
-      
+              <div class="table-responsive">
+                <table class="table table-bordered" id="content_table">
+                  <tr>
+                    <th rowspan="2" class="align-middle">TRAINING</th>
+                    <td>Spend in Brunei (BND)</td>
+                    <td>Spend out Brunei (BND)</td>
+                    <td>Total Spend (BND)</td>
+                    <td>% Spend in Brunei</td>
+                    <td hidden>Date</td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" class="form-control shadow-none" name="train_spendin" id="trainspendin" onkeyup="Calc14(this);"></td>
+                    <td><input type="number" class="form-control shadow-none" name="train_spendout" id="trainspendout" onkeyup="Calc14(this);"></td>
+                    <td><input type="number" class="form-control shadow-none" name="total_training" id="totaltraining" disabled></td>
+                    <td><input type="number" class="form-control shadow-none" name="pct_training" id="pcttraining" disabled></td>
+                    <td hidden><input type="date" class="form-control shadow-none" name="date_emp" id="date_emp"></td>
+                  </tr>
+                </table>
+              </div>
               <!-- Submit button-->
               <div class="text-right">
               <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1282,44 +1297,46 @@ function menuBtnChange() {
           <label for="twelfth"> Goods </label>
             <div class="content">
           <!--  Bootstrap table-->
-          <table class="table-responsive table table-bordered" style="margin: 8px auto; width: 90%;">
-            <thead>
-              <tr>
-                  <th scope="col">GOODS</th>
-                  <th scope="col">Spend in Brunei (BND)</th>
-                  <th scope="col">Spend out Brunei (BND)</th>
-                  <th scope="col">Total Spend (BND)</th>
-                  <th scope="col">% Spend in Brunei</th>
-                  <th scope="col" hidden>Date</th>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="content_table">
+              <thead>
+                <tr>
+                    <th scope="col">GOODS</th>
+                    <th scope="col">Spend in Brunei (BND)</th>
+                    <th scope="col">Spend out Brunei (BND)</th>
+                    <th scope="col">Total Spend (BND)</th>
+                    <th scope="col">% Spend in Brunei</th>
+                    <th scope="col" hidden>Date</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Manufactured</th>
+                    <td><input type="number" class="form-control shadow-none" name="manufactured" id="man_bru" onkeyup="Calc15(this);"></td>
+                  <td class="table-active text-center">Not Applicable</td>
+                  <td><input type="number" class="form-control shadow-none" name="total_manufactured" id="totalmanufactured" disabled></td>
+                  <td><input type="number" class="form-control shadow-none" name="pct_manufactured" id="pctmanufactured" disabled></td>
+                  <td hidden><input type="date" class="form-control shadow-none" name="date_manufactured" id="datemanufactured"></td>
                 </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Manufactured</th>
-                  <td><input type="number" class="form-control shadow-none" name="manufactured" id="man_bru" onkeyup="Calc15(this);"></td>
-                <td class="table-active text-center">Not Applicable</td>
-                <td><input type="number" class="form-control shadow-none" name="total_manufactured" id="totalmanufactured" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="pct_manufactured" id="pctmanufactured" disabled></td>
-                <td hidden><input type="date" class="form-control shadow-none" name="date_manufactured" id="datemanufactured"></td>
-              </tr>
-              <tr>
-                <th scope="row">Purchased</th>
-                  <td><input type="number" class="form-control shadow-none" name="purchase_spendin" id="purchasespendin" onkeyup="Calc16(this);"></td>
-                <td><input type="number" class="form-control shadow-none" name="purchase_spendout" id="purchasespendout" onkeyup="Calc16(this);"></td>
-                <td><input type="number" class="form-control shadow-none" name="total_purchase" id="totalpurchase" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="purchase_pct" id="purchasepct" disabled></td>
-                <td hidden><input type="date" class="form-control shadow-none" name="date_purchase" id="datepurchase"></td>
-              </tr>
-              <tr>
-                <th scope="row">GOODS TOTAL</th>
-                  <td><input type="number" class="form-control shadow-none" name="spendin_goods" id="spendingoods" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="spendout_goods" id="spendoutgoods" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="total_goods" id="totalgoods" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="goods_pct" id="goodspct" disabled></td>
-                <td hidden><input type="date" class="form-control shadow-none" name="date_goods" id="dategoods"></td>
-              </tr>
-            </tbody>
-        </table>
+                <tr>
+                  <th scope="row">Purchased</th>
+                    <td><input type="number" class="form-control shadow-none" name="purchase_spendin" id="purchasespendin" onkeyup="Calc16(this);"></td>
+                  <td><input type="number" class="form-control shadow-none" name="purchase_spendout" id="purchasespendout" onkeyup="Calc16(this);"></td>
+                  <td><input type="number" class="form-control shadow-none" name="total_purchase" id="totalpurchase" disabled></td>
+                  <td><input type="number" class="form-control shadow-none" name="purchase_pct" id="purchasepct" disabled></td>
+                  <td hidden><input type="date" class="form-control shadow-none" name="date_purchase" id="datepurchase"></td>
+                </tr>
+                <tr>
+                  <th scope="row">GOODS TOTAL</th>
+                    <td><input type="number" class="form-control shadow-none" name="spendin_goods" id="spendingoods" disabled></td>
+                  <td><input type="number" class="form-control shadow-none" name="spendout_goods" id="spendoutgoods" disabled></td>
+                  <td><input type="number" class="form-control shadow-none" name="total_goods" id="totalgoods" disabled></td>
+                  <td><input type="number" class="form-control shadow-none" name="goods_pct" id="goodspct" disabled></td>
+                  <td hidden><input type="date" class="form-control shadow-none" name="date_goods" id="dategoods"></td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
 
           <!-- Add rows button-->
           <div class="text-right">
@@ -1376,24 +1393,25 @@ function menuBtnChange() {
         <label for="thirteenth"> Services</label>
           <div class="content">
         <!--  Bootstrap table-->
-            <table class="table-responsive table table-bordered"  style="margin: 8px auto; width: 90%;">
-              <tr>
-                <th rowspan="2" class="align-middle">SERVICES</th>
-                <td>Spend in Brunei (BND)</td>
-                <td>Spend out Brunei (BND)</td>
-                <td>Total Spend (BND)</td>
-                <td>% Spend in Brunei</td>
-                <td hidden>Date</td>
-              </tr>
-              <tr>
-                <td><input type="number" class="form-control shadow-none" name="service_spendin" id="servicespendin" onkeyup="Calc17(this);"></td>
-                <td><input type="number" class="form-control shadow-none" name="service_spendout" id="servicespendout" onkeyup="Calc17(this);"></td>
-                <td><input type="number" class="form-control shadow-none" name="total_service" id="totalservice" disabled></td>
-                <td><input type="number" class="form-control shadow-none" name="service_pct" id="servicepct" disabled></td>
-                <td hidden><input type="date" class="form-control shadow-none" name="service_date" id="servicedate"></td>
-              </tr>
-            </table>
-
+        <div class="table-responsive">
+          <table class="table table-bordered" id="content_table">
+            <tr>
+              <th rowspan="2" class="align-middle">SERVICES</th>
+              <td>Spend in Brunei (BND)</td>
+              <td>Spend out Brunei (BND)</td>
+              <td>Total Spend (BND)</td>
+              <td>% Spend in Brunei</td>
+              <td hidden>Date</td>
+            </tr>
+            <tr>
+              <td><input type="number" class="form-control shadow-none" name="service_spendin" id="servicespendin" onkeyup="Calc17(this);"></td>
+              <td><input type="number" class="form-control shadow-none" name="service_spendout" id="servicespendout" onkeyup="Calc17(this);"></td>
+              <td><input type="number" class="form-control shadow-none" name="total_service" id="totalservice" disabled></td>
+              <td><input type="number" class="form-control shadow-none" name="service_pct" id="servicepct" disabled></td>
+              <td hidden><input type="date" class="form-control shadow-none" name="service_date" id="servicedate"></td>
+            </tr>
+          </table>
+        </div>
         <!-- Add rows button-->
         <div class="text-right">
         <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1449,50 +1467,52 @@ function menuBtnChange() {
             <div class="content">
               <p>Existing Apprentice</p>
                 <!--  Bootstrap table-->
-                    <table class="table-responsive table table-bordered" id="table7">
-                        <thead>
-                          <tr>
-                            <th scope="col" hidden>#</th>
-                              <th scope="col">Name</th>
-                              <th scope="col">IC No</th>
-                              <th scope="col">I-Ready (Y/N)</th>
-                              <th scope="col">Duration</th>
-                              <th scope="col">Start</th>
-                              <th scope="col">End</th>
-                              <th scope="col">Qualification</th>
-                              <th scope="col">Skill/Trade</th>
-                              <th scope="col">Accreditation</th>
-                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></th>
-                            </tr>
-                        </thead>
-                        <tbody id="appbody">
-                          <tr>
-                            <th scope="row" hidden>1</th>
-                              <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
-                            <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
-                            <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
-                            <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
-                            <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
-                            <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
-                            <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
-                            <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
-                            <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="app_table">
+                      <thead>
+                        <tr>
+                          <th scope="row" hidden>#</th>
+                            <th style="width: 20%;">Name</th>
+                            <th>IC Number</th>
+                            <th>I-Ready (Y/N)</th>
+                            <th>Duration</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th style="width: 10%;">Qualification</th>
+                            <th style="width: 10%;">Skill/Trade</th>
+                            <th>Accreditation</th>
+                            <th style="width: 5%;"><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></th>
                           </tr>
-                          <tr id="approw" class="d-none">
-                            <th scope="row" hidden>1</th>
-                              <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
-                            <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
-                            <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
-                            <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
-                            <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
-                            <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
-                            <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
-                            <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
-                            <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelApprentice(this)"><i class="fa fa-trash"></i></button></td>
-                          </tr>
-                        </tbody>
-                    </table>
+                      </thead>
+                      <tbody id="appbody">
+                        <tr>
+                          <th scope="row" hidden>1</th>
+                            <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
+                          <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
+                          <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
+                          <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
+                          <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
+                          <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
+                          <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
+                          <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
+                          <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
+                        </tr>
+                        <tr id="approw" class="d-none">
+                          <th scope="row" hidden>1</th>
+                            <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
+                          <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
+                          <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
+                          <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
+                          <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
+                          <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
+                          <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
+                          <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
+                          <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
+                          <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelApprentice(this)"><i class="fa fa-trash"></i></button></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
                     <div class="text-right">
                       <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                     </div>
@@ -1560,11 +1580,12 @@ function menuBtnChange() {
               <div class="content">
                 <p>Existing Sub-Contract</p>
                   <!--  Bootstrap table-->
-                      <table class="table-responsive table table-bordered" id="table8">
+                  <div class="table-responsive">
+                      <table class="table table-bordered" id="sub_table">
                           <thead>
                             <tr>
                               <th scope="col" hidden>#</th>
-                              <th scope="col">Company Name</th>
+                              <th style="width: 30%;">Company Name</th>
                                 <th scope="col">Year / Percentage of work sub-contracted to local vendors</th>
                                 <th scope="col">Planned %</th>
                                 <th scope="col">Planned $</th>
@@ -1595,6 +1616,7 @@ function menuBtnChange() {
                             </tr>
                           </tbody>
                       </table>
+                    </div>
                       <div class="text-right">
                         <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                       </div>

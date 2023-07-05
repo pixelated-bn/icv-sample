@@ -33,17 +33,17 @@
         </li>
         <li>
           <a href="company_level.html" style="background-color:#dddddd;">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Company Level</span>
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Company Level Form</span>
           </a>
-          <span class="tooltip">Company Level</span>
+          <span class="tooltip">Company Level Form</span>
         </li>
         <li>
           <a href="contract_level.html">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Contract Level</span>
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Contract Level Form</span>
           </a>
-          <span class="tooltip">Contract Level</span>
+          <span class="tooltip">Contract Level Form</span>
         </li>
         <li>
           <a href="index.html">
@@ -93,11 +93,11 @@ function menuBtnChange() {
       <div class="container">
         <div class="card">
           
-          <h3 id="myId" style="display: none">No Quarter Available</h3>
-          <h3 id="Q01" style="display: none">Quarter 1</h3>
-          <h3 id="Q02" style="display: none">Quarter 2</h3>
-          <h3 id="Q03" style="display: none">Quarter 3</h3>
-          <h3 id="Q04" style="display: none">Quarter 4</h3>
+          <h3 id="myId" style="display: none; text-align: center;">No Quarter Available</h3>
+          <h3 id="Q01" style="display: none; text-align: center;">Quarter 1</h3>
+          <h3 id="Q02" style="display: none; text-align: center;">Quarter 2</h3>
+          <h3 id="Q03" style="display: none; text-align: center;">Quarter 3</h3>
+          <h3 id="Q04" style="display: none; text-align: center;">Quarter 4</h3>
         
           <script>
 
@@ -223,11 +223,12 @@ function menuBtnChange() {
       <label for="first"> Existing Management </label>
         <div class="content"><br>
             <!--  Bootstrap table-->
-                <table class="table table-responsive table-bordered table-fixed" id="mgt_table">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="force_table">
                     <thead>
                       <tr>
                         <th hidden>#</th>
-                          <th>Job Position</th>
+                          <th style="width: 30%;">Job Position</th>
                           <th>Local</th>
                           <th>Non-Local</th>
                           <th>SAWP</th>
@@ -258,6 +259,7 @@ function menuBtnChange() {
                       </tr>
                     </tbody>
                 </table>
+              </div>
 </div>
 </li>
           <script>
@@ -323,11 +325,12 @@ function Calc(v)
 <label for="second"> Existing Supervisor </label>
   <div class="content"><br>
             <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered" id="table2">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="force_table">
                     <thead>
                       <tr>
                         <th scope="col" hidden>#</th>
-                          <th scope="col">Job Position</th>
+                          <th style="width: 30%;">Job Position</th>
                           <th scope="col">Local</th>
                           <th scope="col">Non-Local</th>
                           <th scope="col">SAWP</th>
@@ -358,6 +361,7 @@ function Calc(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
               </div>
             </li>
 
@@ -420,11 +424,12 @@ function Calc2(v)
       <label for="third"> Existing Skilled </label>
         <div class="content"><br>
             <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered" id="table3">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="force_table">
                     <thead>
                       <tr>
                         <th scope="col" hidden>#</th>
-                          <th scope="col">Job Position</th>
+                          <th style="width: 30%;">Job Position</th>
                           <th scope="col">Local</th>
                           <th scope="col">Non-Local</th>
                           <th scope="col">SAWP</th>
@@ -455,6 +460,7 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
               </div>
             </li>
                 <script>
@@ -516,11 +522,12 @@ function Calc2(v)
       <label for="fourth"> Existing Non-Skilled </label>
         <div class="content"><br>
             <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered" id="table4">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="force_table">
                     <thead>
                       <tr>
                         <th scope="col" hidden>#</th>
-                          <th scope="col">Job Position</th>
+                          <th style="width: 30%;">Job Position</th>
                           <th scope="col">Local</th>
                           <th scope="col">Non-Local</th>
                           <th scope="col">SAWP</th>
@@ -551,6 +558,7 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
               </div>
             </li>
                 <script>
@@ -612,11 +620,12 @@ function Calc2(v)
       <label for="fifth"> Existing Admin & Account </label>
         <div class="content"><br>
             <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered" id="table5">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="force_table">
                     <thead>
                       <tr>
                         <th scope="col" hidden>#</th>
-                          <th scope="col">Job Position</th>
+                          <th style="width: 30%;">Job Position</th>
                           <th scope="col">Local</th>
                           <th scope="col">Non-Local</th>
                           <th scope="col">SAWP</th>
@@ -647,6 +656,7 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
               </div>
             </li>
                 <script>
@@ -978,7 +988,8 @@ function Calc2(v)
             <div class="content">
                   <p class="mb-0">Breakdown of Local Leavers This Year</p>
                     <!--  Bootstrap table-->
-                    <table class="table table-bordered table-responsive">
+                    <div class="table-responsive">
+                    <table class="table table-bordered" id="leavers_table">
                       <thead>
                         <tr>
                           <th scope="col">Resign</th>
@@ -998,7 +1009,7 @@ function Calc2(v)
                         </tr>
                       </tbody>
                       </table>
-        
+                    </div>
                     <!-- Add rows button-->
                     <div class="text-right">
                     <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1032,7 +1043,8 @@ function Calc2(v)
             <div class="content">
                 <p class="mb-0">Breakdown of Non-Local Leavers This Year</p>
                   <!--  Bootstrap table-->
-                  <table class="table table-bordered table-responsive">
+                  <div class="table-responsive">
+                  <table class="table table-bordered" id="leavers_table">
                     <thead>
                       <tr>
                         <th scope="col">Resign</th>
@@ -1052,7 +1064,7 @@ function Calc2(v)
                       </tr>
                     </tbody>
                     </table>
-      
+                  </div>
                   <!-- Add rows button-->
                   <div class="text-right">
                   <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1107,7 +1119,8 @@ function Calc2(v)
             <label for="tenth"> Employment </label>
               <div class="content">
               <!--  Bootstrap table-->
-                  <table class="table-responsive table table-bordered">
+              <div class="table-responsive">
+                  <table class="table table-bordered" id="content_table">
                       <thead>
                         <tr>
                             <th scope="col">EMPLOYMENT</th>
@@ -1145,7 +1158,7 @@ function Calc2(v)
                         </tr>
                       </tbody>
                   </table>
-  
+                </div>
               <!-- Submit button-->
               <div class="text-right">
               <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1202,7 +1215,8 @@ function Calc2(v)
             <label for="eleventh"> Training </label>
               <div class="content">
                 <!--  Bootstrap table-->
-                <table class="table-responsive table table-bordered"  style="margin: 8px auto; width: 90%;">
+                <div class="table-responsive">
+                <table class="table table-bordered" id="content_table">
                   <tr>
                     <th rowspan="2" class="align-middle">TRAINING</th>
                     <td>Spend in Brunei (BND)</td>
@@ -1219,7 +1233,7 @@ function Calc2(v)
                     <td hidden><input type="date" class="form-control shadow-none" name="date_emp" id="date_emp"></td>
                   </tr>
                 </table>
-        
+              </div>
                 <!-- Submit button-->
                 <div class="text-right">
                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1255,7 +1269,8 @@ function Calc2(v)
             <label for="twelfth"> Goods </label>
               <div class="content">
             <!--  Bootstrap table-->
-            <table class="table-responsive table table-bordered" style="margin: 8px auto; width: 90%;">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="content_table">
               <thead>
                 <tr>
                     <th scope="col">GOODS</th>
@@ -1293,7 +1308,7 @@ function Calc2(v)
                 </tr>
               </tbody>
           </table>
-
+        </div>
             <!-- Add rows button-->
             <div class="text-right">
             <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1349,7 +1364,8 @@ function Calc2(v)
           <label for="thirteenth"> Services</label>
             <div class="content">
           <!--  Bootstrap table-->
-              <table class="table-responsive table table-bordered"  style="margin: 8px auto; width: 90%;">
+             <div class="table-responsive">
+              <table class="table table-bordered" id="content_table">
                 <tr>
                   <th rowspan="2" class="align-middle">SERVICES</th>
                   <td>Spend in Brunei (BND)</td>
@@ -1366,7 +1382,7 @@ function Calc2(v)
                   <td hidden><input type="date" class="form-control shadow-none" name="service_date" id="servicedate"></td>
                 </tr>
               </table>
-
+            </div>
           <!-- Add rows button-->
           <div class="text-right">
           <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
@@ -1422,20 +1438,21 @@ function Calc2(v)
             <div class="content">
               <p>Existing Apprentice</p>
                 <!--  Bootstrap table-->
-                    <table class="table-responsive table table-bordered" id="table7">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="app_table">
                         <thead>
                           <tr>
                             <th scope="row" hidden>#</th>
-                              <th class="w-75">Name</th>
-                              <th>IC No</th>
+                              <th style="width: 20%;">Name</th>
+                              <th>IC Number</th>
                               <th>I-Ready (Y/N)</th>
                               <th>Duration</th>
                               <th>Start</th>
                               <th>End</th>
-                              <th>Qualification</th>
-                              <th>Skill/Trade</th>
+                              <th style="width: 10%;">Qualification</th>
+                              <th style="width: 10%;">Skill/Trade</th>
                               <th>Accreditation</th>
-                              <th><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></th>
+                              <th style="width: 5%;"><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></th>
                             </tr>
                         </thead>
                         <tbody id="appbody">
@@ -1466,6 +1483,7 @@ function Calc2(v)
                           </tr>
                         </tbody>
                     </table>
+                  </div>
                     <div class="text-right">
                       <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                     </div>
