@@ -197,15 +197,15 @@ function menuBtnChange() {
                 <td class="text-center" style="background-color: #808285; font-weight:bold;">%Local</td>
               </tr>
               <tr>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totaloflocal" id="total_local" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalofnonlocal" id="total_nonlocal" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalofsawp" id="total_sawp" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalworkforce" id="totalforce" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="localpcttotal" id="local_pct" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalnewlocal" id="new_local" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalnewnonlocal" id="new_nonlocal" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalnewhire" id="new_total" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalpcthire" id="new_localpct" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totaloflocal" id="total_local" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalofnonlocal" id="total_nonlocal" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalofsawp" id="total_sawp" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalworkforce" id="totalforce" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="localpcttotal" id="local_pct" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewlocal" id="new_local" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewnonlocal" id="new_nonlocal" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewhire" id="new_total" disabled></td>
+                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalpcthire" id="new_localpct" disabled></td>
               </tr>
             </table>
           </div>
@@ -228,13 +228,13 @@ function menuBtnChange() {
                     <thead>
                       <tr>
                         <th hidden>#</th>
-                          <th style="width: 30%;">Job Position</th>
+                          <th style="width: 40%;">Job Position</th>
                           <th>Local</th>
                           <th>Non-Local</th>
                           <th>SAWP</th>
                           <th>Total</th>
                           <th>% Local</th>
-                        <th><button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">+</button></th>
+                          <th style="width: 5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="mbody">
@@ -246,6 +246,7 @@ function menuBtnChange() {
                         <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
+                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">+</button></td>
                       </tr>
                       <tr id="mrow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -260,6 +261,10 @@ function menuBtnChange() {
                     </tbody>
                 </table>
               </div>
+              <div class="text-right">
+                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
+              </div>
+              
 </div>
 </li>
           <script>
@@ -330,13 +335,13 @@ function Calc(v)
                     <thead>
                       <tr>
                         <th scope="col" hidden>#</th>
-                          <th style="width: 30%;">Job Position</th>
+                          <th style="width: 40%;">Job Position</th>
                           <th scope="col">Local</th>
                           <th scope="col">Non-Local</th>
                           <th scope="col">SAWP</th>
                           <th scope="col">Total</th>
                           <th scope="col">% Local</th>
-                          <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">+</button></th>
+                          <th style="width: 5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="sbody">
@@ -348,6 +353,7 @@ function Calc(v)
                         <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
+                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">+</button></td>
                       </tr>
                       <tr id="srow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -361,6 +367,9 @@ function Calc(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
+              <div class="text-right">
+                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
               </div>
               </div>
             </li>
@@ -435,7 +444,7 @@ function Calc2(v)
                           <th scope="col">SAWP</th>
                           <th scope="col">Total</th>
                           <th scope="col">% Local</th>
-                          <th><button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">+</button></th>
+                          <th style="width: 5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="skbody">
@@ -447,6 +456,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
+                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">+</button></td>
                       </tr>
                       <tr id="skrow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -460,6 +470,9 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
+              <div class="text-right">
+                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
               </div>
               </div>
             </li>
@@ -533,7 +546,7 @@ function Calc2(v)
                           <th scope="col">SAWP</th>
                           <th scope="col">Total</th>
                           <th scope="col">% Local</th>
-                          <th><button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">+</button></th>
+                          <th style="width: 5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="nskbody">
@@ -545,6 +558,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
+                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">+</button></td>
                       </tr>
                       <tr id="nskrow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -558,6 +572,9 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
+              <div class="text-right">
+                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
               </div>
               </div>
             </li>
@@ -631,7 +648,7 @@ function Calc2(v)
                           <th scope="col">SAWP</th>
                           <th scope="col">Total</th>
                           <th scope="col">% Local</th>
-                          <th><button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">+</button></th>
+                          <th style="width: 5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="aabody">
@@ -643,6 +660,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
+                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">+</button></td>
                       </tr>
                       <tr id="aarow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -656,6 +674,9 @@ function Calc2(v)
                       </tr>
                     </tbody>
                 </table>
+              </div>
+              <div class="text-right">
+                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
               </div>
               </div>
             </li>
@@ -717,7 +738,6 @@ function Calc2(v)
   </ul>
         <!-- Button section for 1st step-->
         <div class="text-right">
-          <a href="#" class="btn btn-save btn-lg" type="submit" id="signbutton2">Submit</a>
           <a href="#" class="btn btn-next btn-lg" id="signbutton2">Next</a>
         </div>
        <!-- End of Button Section for 1st step -->
@@ -762,17 +782,12 @@ function Calc2(v)
             <td><input type="number" class="form-control shadow-none" name="grad_thisyr" id="gradthisyr" onkeyup="Calc7(this);"></td>
           </tr>
           <tr>
-              <td>HND</td>
+              <td>Higher National Diploma (HND)</td>
             <td><input type="number" class="form-control shadow-none" name="hnd_todate" id="hndtodate" onkeyup="Calc6(this);"></td>
             <td><input type="number" class="form-control shadow-none" name="hnd_thisyr" id="hndthisyr" onkeyup="Calc7(this);"></td>
           </tr>
           <tr>
-              <td>PPK</td>
-            <td><input type="number" class="form-control shadow-none" name="ppk_todate" id="ppktodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="ppk_thisyr" id="ppkthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>BMA</td>
+              <td>Brunei Maritime Academy (BMA)</td>
             <td><input type="number" class="form-control shadow-none" name="bma_todate" id="bmatodate" onkeyup="Calc6(this);"></td>
             <td><input type="number" class="form-control shadow-none" name="bma_thisyr" id="bmathisyr" onkeyup="Calc7(this);"></td>
             
@@ -815,13 +830,12 @@ function Calc2(v)
                      var roll_todate = parseFloat(document.getElementsByName("roll_todate")[index].value);
                      var grad_todate = parseFloat(document.getElementsByName("grad_todate")[index].value);
                      var hnd_todate = parseFloat(document.getElementsByName("hnd_todate")[index].value);
-                    var ppk_todate = parseFloat(document.getElementsByName("ppk_todate")[index].value);
                    var bma_todate = parseFloat(document.getElementsByName("bma_todate")[index].value);
                    var dc_todate = parseFloat(document.getElementsByName("dc_todate")[index].value);
                    var ibte_todate = parseFloat(document.getElementsByName("ibte_todate")[index].value);
                    var sch_todate = parseFloat(document.getElementsByName("sch_todate")[index].value);
                             
-                   var totalhirelocaltodate = hire_todate + roll_todate + grad_todate + hnd_todate + ppk_todate + bma_todate + dc_todate + ibte_todate + sch_todate;
+                   var totalhirelocaltodate = hire_todate + roll_todate + grad_todate + hnd_todate + bma_todate + dc_todate + ibte_todate + sch_todate;
                     parseFloat(document.getElementsByName("total_todate")[index].value = totalhirelocaltodate);
 
                     
@@ -837,13 +851,12 @@ function Calc2(v)
                               var roll_thisyr = parseFloat(document.getElementsByName("roll_thisyr")[index].value);
                               var grad_thisyr = parseFloat(document.getElementsByName("grad_thisyr")[index].value);
                               var hnd_thisyr = parseFloat(document.getElementsByName("hnd_thisyr")[index].value);
-                             var ppk_thisyr = parseFloat(document.getElementsByName("ppk_thisyr")[index].value);
                             var bma_thisyr = parseFloat(document.getElementsByName("bma_thisyr")[index].value);
                             var dc_thisyr = parseFloat(document.getElementsByName("dc_thisyr")[index].value);
                             var ibte_thisyr = parseFloat(document.getElementsByName("ibte_thisyr")[index].value);
                             var sch_thisyr = parseFloat(document.getElementsByName("sch_thisyr")[index].value);
                                      
-                            var totalhirelocalthisyr = hire_thisyr + roll_thisyr + grad_thisyr + hnd_thisyr + ppk_thisyr + bma_thisyr + dc_thisyr + ibte_thisyr + sch_thisyr;
+                            var totalhirelocalthisyr = hire_thisyr + roll_thisyr + grad_thisyr + hnd_thisyr + bma_thisyr + dc_thisyr + ibte_thisyr + sch_thisyr;
                              parseFloat(document.getElementsByName("total_thisyr")[index].value = totalhirelocalthisyr);
                             
                           
@@ -886,17 +899,12 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="nongrad_thisyr" id="gradthisyr" onkeyup="Calc9(this);"></td>
                       </tr>
                       <tr>
-                          <td>HND</td>
+                          <td>Higher National Diploma (HND)</td>
                         <td><input type="number" class="form-control shadow-none" name="nonhnd_todate" id="hndtodate" onkeyup="Calc8(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nonhnd_thisyr" id="hndthisyr" onkeyup="Calc9(this);"></td>
                       </tr>
                       <tr>
-                          <td>PPK</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonppk_todate" id="ppktodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonppk_thisyr" id="ppkthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>BMA</td>
+                          <td>Brunei Maritime Academy (BMA)</td>
                         <td><input type="number" class="form-control shadow-none" name="nonbma_todate" id="bmatodate" onkeyup="Calc8(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nonbma_thisyr" id="bmathisyr" onkeyup="Calc9(this);"></td>
                         
@@ -939,13 +947,12 @@ function Calc2(v)
                      var nonroll_todate = parseFloat(document.getElementsByName("nonroll_todate")[index].value);
                      var nongrad_todate = parseFloat(document.getElementsByName("nongrad_todate")[index].value);
                      var nonhnd_todate = parseFloat(document.getElementsByName("nonhnd_todate")[index].value);
-                    var nonppk_todate = parseFloat(document.getElementsByName("nonppk_todate")[index].value);
                    var nonbma_todate = parseFloat(document.getElementsByName("nonbma_todate")[index].value);
                    var nondc_todate = parseFloat(document.getElementsByName("nondc_todate")[index].value);
                    var nonibte_todate = parseFloat(document.getElementsByName("nonibte_todate")[index].value);
                    var nonsch_todate = parseFloat(document.getElementsByName("nonsch_todate")[index].value);
                             
-                   var totalhirenonlocaltodate = nonhire_todate + nonroll_todate + nongrad_todate + nonhnd_todate + nonppk_todate + nonbma_todate + nondc_todate + nonibte_todate + nonsch_todate;
+                   var totalhirenonlocaltodate = nonhire_todate + nonroll_todate + nongrad_todate + nonhnd_todate+ nonbma_todate + nondc_todate + nonibte_todate + nonsch_todate;
                     parseFloat(document.getElementsByName("nontotal_todate")[index].value = totalhirenonlocaltodate);
                     console.log(totalhirenonlocaltodate);
 
@@ -962,13 +969,12 @@ function Calc2(v)
                               var nonroll_thisyr = parseFloat(document.getElementsByName("nonroll_thisyr")[index].value);
                               var nongrad_thisyr = parseFloat(document.getElementsByName("nongrad_thisyr")[index].value);
                               var nonhnd_thisyr = parseFloat(document.getElementsByName("nonhnd_thisyr")[index].value);
-                             var nonppk_thisyr = parseFloat(document.getElementsByName("nonppk_thisyr")[index].value);
                             var nonbma_thisyr = parseFloat(document.getElementsByName("nonbma_thisyr")[index].value);
                             var nondc_thisyr = parseFloat(document.getElementsByName("nondc_thisyr")[index].value);
                             var nonibte_thisyr = parseFloat(document.getElementsByName("nonibte_thisyr")[index].value);
                             var nonsch_thisyr = parseFloat(document.getElementsByName("nonsch_thisyr")[index].value);
                                      
-                            var totalhirenonlocalthisyr = nonhire_thisyr + nonroll_thisyr + nongrad_thisyr + nonhnd_thisyr + nonppk_thisyr + nonbma_thisyr + nondc_thisyr + nonibte_thisyr + nonsch_thisyr;
+                            var totalhirenonlocalthisyr = nonhire_thisyr + nonroll_thisyr + nongrad_thisyr + nonhnd_thisyr + nonbma_thisyr + nondc_thisyr + nonibte_thisyr + nonsch_thisyr;
                              parseFloat(document.getElementsByName("nontotal_thisyr")[index].value = totalhirenonlocalthisyr);
                              console.log(totalhirenonlocalthisyr);
 
@@ -1449,10 +1455,10 @@ function Calc2(v)
                               <th>Duration</th>
                               <th>Start</th>
                               <th>End</th>
-                              <th style="width: 10%;">Qualification</th>
-                              <th style="width: 10%;">Skill/Trade</th>
+                              <th style="width: 12%;">Qualification</th>
+                              <th style="width: 12%;">Skill/Trade</th>
                               <th>Accreditation</th>
-                              <th style="width: 5%;"><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></th>
+                              <th style="width: 4%;"></th>
                             </tr>
                         </thead>
                         <tbody id="appbody">
@@ -1467,6 +1473,7 @@ function Calc2(v)
                             <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
                             <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
                             <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
+                            <td><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></td>
                           </tr>
                           <tr id="approw" class="d-none">
                             <th scope="row" hidden>1</th>

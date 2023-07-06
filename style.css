@@ -440,12 +440,14 @@ table{
 
 #app_table{
   overflow-x: scroll;
-  width: 2200px;
+  width: 2100px;
+  margin: 5px auto;
 }
 
 #force_table{
   overflow-x: scroll;
   width: 960px;
+  margin: 8px auto;
 }
 
 #leavers_table{
@@ -462,4 +464,5 @@ table{
 #sub_table{
   overflow-x: scroll;
   width: 960px;
+  margin: 8px auto;
 }
