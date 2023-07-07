@@ -1146,27 +1146,29 @@ function menuBtnChange() {
     <div class="container">
       <div class="form-step">
 
-        <table class="table table-bordered table-responsive" style="margin: 5px auto; width: 90%;">
-          <thead>
-          <tr>
-            <th class="text-center" style="background-color: #58595B; color: #fff;" colspan="4">Total Spend</th>
-          </tr>
-          <tr>
-              <th class="text-center" style="background-color: #808285; font-weight:bold; height: 10px;">Total Spend in Brunei (BND)</th>
-              <th class="text-center" style="background-color: #808285; font-weight:bold; height: 10px;">Total Spend out Brunei (BND)</th>
-              <th class="text-center" style="background-color: #808285; font-weight:bold; height: 10px;">Total Spend (BND)</th>
-              <th class="text-center" style="background-color: #808285; font-weight:bold; height: 10px;">% Spend in Brunei</th>
+        <div class="table-responsive">
+          <table class="table table-bordered" id="spend_table">
+            <thead>
+            <tr>
+              <th class="text-center" style="background-color: #58595B; color: #fff;" colspan="4">Total Spend</th>
             </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="" id="" disabled></td>
-            <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="" id="" disabled></td>
-            <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="" id="" disabled></td>
-            <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="" id="" disabled></td>
-          </tr>
-        </tbody>
-        </table>
+            <tr>
+                <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend in Brunei (BND $)</th>
+                <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend out Brunei (BND $)</th>
+                <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend (BND $)</th>
+                <th class="text-center" style="background-color: #808285; height: 10px;">% Spend in Brunei</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="total_in" id="totalin" disabled></td>
+              <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="total_out" id="totalout" disabled></td>
+              <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="total_spend" id="totalspend" disabled></td>
+              <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none;" name="totalpct_spend" id="totalpctspend" disabled></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
 <br>
 
         <h4>Section 3 - Content Break Down</h4>
@@ -1277,10 +1279,10 @@ function menuBtnChange() {
                 <table class="table table-bordered" id="content_table">
                   <tr>
                     <th rowspan="2" class="align-middle">TRAINING</th>
-                    <td>Spend in Brunei (BND)</td>
-                    <td>Spend out Brunei (BND)</td>
-                    <td>Total Spend (BND)</td>
-                    <td>% Spend in Brunei</td>
+                    <td style="font-weight: bold;">Spend in Brunei (BND $)</td>
+                    <td style="font-weight: bold;">Spend out Brunei (BND $)</td>
+                    <td style="font-weight: bold;">Total Spend (BND $)</td>
+                    <td style="font-weight: bold;">% Spend in Brunei</td>
                     <td hidden>Date</td>
                   </tr>
                   <tr>
@@ -1314,7 +1316,7 @@ function menuBtnChange() {
             var trainpct = Math.round(trainingpct * 10) / 10;
             parseFloat(document.getElementsByName("pct_training")[index].value = trainpct);
               
-          
+          GetTotal();
               
               }
               </script>
@@ -1427,10 +1429,10 @@ function menuBtnChange() {
           <table class="table table-bordered" id="content_table">
             <tr>
               <th rowspan="2" class="align-middle">SERVICES</th>
-              <td>Spend in Brunei (BND)</td>
-              <td>Spend out Brunei (BND)</td>
-              <td>Total Spend (BND)</td>
-              <td>% Spend in Brunei</td>
+              <td style="font-weight: bold;">Spend in Brunei (BND $)</td>
+              <td style="font-weight: bold;">Spend out Brunei (BND $)</td>
+              <td style="font-weight: bold;">Total Spend (BND $)</td>
+              <td style="font-weight: bold;">% Spend in Brunei</td>
               <td hidden>Date</td>
             </tr>
             <tr>
@@ -1464,7 +1466,7 @@ function menuBtnChange() {
       var servpct = Math.round(pctservice * 10) / 10;
       parseFloat(document.getElementsByName("service_pct")[index].value = servpct);
         
-    
+    GetTotal();
         
         }
         </script>
@@ -2086,6 +2088,112 @@ function GetTotal()
    document.getElementById("goodspct").value = pct_g;
 
    //End of content break down for goods
+
+////////////////////////////////////////////////////////////
+
+   //Total Spend in Brunei Calculation
+
+   var sum_emp=0;
+    var emp =  document.getElementsByName("total_emp_spendin");
+
+    for (let index = 0; index < emp.length; index++)
+    {
+        var total_emp_spendin = emp[index].value;
+        sum_emp = +(sum_emp) +  +(total_emp_spendin) ; 
+    }
+
+    var sum_training=0;
+    var training =  document.getElementsByName("train_spendin");
+
+    for (let index = 0; index < training.length; index++)
+    {
+        var train_spendin = training[index].value;
+        sum_training = +(sum_training) +  +(train_spendin) ; 
+    }
+
+    var sum_goods=0;
+    var good =  document.getElementsByName("spendin_goods");
+
+    for (let index = 0; index < good.length; index++)
+    {
+        var spendin_goods = good[index].value;
+        sum_goods = +(sum_goods) +  +(spendin_goods) ; 
+    }
+
+    var sum_services=0;
+    var service =  document.getElementsByName("service_spendin");
+
+    for (let index = 0; index < service.length; index++)
+    {
+        var service_spendin = service[index].value;
+        sum_services = +(sum_services) +  +(service_spendin) ; 
+    }
+
+
+    var totalspendinbrunei = sum_emp + sum_training + sum_goods + sum_services;
+    var test12 = totalspendinbrunei.toFixed(2);
+    document.getElementById("totalin").value = test12;
+
+// End of total spend in brunei calculation
+
+//Total spend out of Brunei calculation
+
+
+var sum_empout=0;
+    var empout =  document.getElementsByName("total_emp_spendout");
+
+    for (let index = 0; index < empout.length; index++)
+    {
+        var total_emp_spendout = empout[index].value;
+        sum_empout = +(sum_empout) +  +(total_emp_spendout) ; 
+    }
+
+    var sum_trainingout=0;
+    var trainingout =  document.getElementsByName("train_spendout");
+
+    for (let index = 0; index < trainingout.length; index++)
+    {
+        var train_spendout = trainingout[index].value;
+        sum_trainingout = +(sum_trainingout) +  +(train_spendout) ; 
+    }
+
+    var sum_goodsout=0;
+    var goodout =  document.getElementsByName("spendout_goods");
+
+    for (let index = 0; index < goodout.length; index++)
+    {
+        var spendout_goods = goodout[index].value;
+        sum_goodsout = +(sum_goodsout) +  +(spendout_goods) ; 
+    }
+
+    var sum_serviceout=0;
+    var serviceout =  document.getElementsByName("service_spendout");
+
+    for (let index = 0; index < serviceout.length; index++)
+    {
+        var service_spendout = serviceout[index].value;
+        sum_serviceout = +(sum_serviceout) +  +(service_spendout) ; 
+    }
+
+
+    var totalspendoutbrunei = sum_empout + sum_trainingout + sum_goodsout + sum_serviceout;
+    var test13 = totalspendoutbrunei.toFixed(2);
+    document.getElementById("totalout").value = test13;
+
+
+// End of total spend out of Brunei calculation
+
+var totalspendsummary = totalspendinbrunei + totalspendoutbrunei;
+var test14 = totalspendsummary.toFixed(2);
+document.getElementById("totalspend").value = test14;
+
+
+var pctspend = (totalspendinbrunei / totalspendsummary) * 100;
+   var pct_spend = Math.round(pctspend * 10) / 10;
+   document.getElementById("totalpctspend").value = pct_spend;
+
+
+
 
 }
 

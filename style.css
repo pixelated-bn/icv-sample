@@ -466,3 +466,9 @@ table{
   width: 960px;
   margin: 8px auto;
 }
+
+#spend_table{
+  overflow-x: scroll;
+  width: 95%;
+  margin: 8px auto;
+}
