@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
+
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
+
     <meta charset="UTF-8" />
-    <title>ICV Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <title>ICV Report</title>
+
+</head>
+
   <body>
+
     <div class="sidebar">
       <div class="logo-details">
         <div class="logo_name">ICV System</div>
@@ -353,7 +357,7 @@ function Calc(v)
                         <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
-                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">+</button></td>
+                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddSupervisor()">+</button></td>
                       </tr>
                       <tr id="srow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -456,7 +460,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
-                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">+</button></td>
+                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddSkilled()">+</button></td>
                       </tr>
                       <tr id="skrow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -558,7 +562,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
-                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">+</button></td>
+                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddNonSkilled()">+</button></td>
                       </tr>
                       <tr id="nskrow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -660,7 +664,7 @@ function Calc2(v)
                         <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
                         <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
-                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">+</button></td>
+                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddAdmAcc()">+</button></td>
                       </tr>
                       <tr id="aarow" class="d-none">
                         <th scope="row" hidden>1</th>
@@ -738,7 +742,7 @@ function Calc2(v)
   </ul>
         <!-- Button section for 1st step-->
         <div class="text-right">
-          <a href="#" class="btn btn-next btn-lg" id="signbutton2">Next</a>
+          <a href="#" class="btn btn-next btn-lg" id="signbutton">Next</a>
         </div>
        <!-- End of Button Section for 1st step -->
         </div> <!-- End of the 1st form -->
@@ -1102,9 +1106,9 @@ function Calc2(v)
 
      <!-- Button section for 2nd step-->
      <div class="text-right">
-      <a href="#" class="btn btn-prev btn-lg" id="signbutton2">Previous</a>
+      <a href="#" class="btn btn-prev btn-lg" id="signbutton">Previous</a>
       <!--<a href="#" class="btn btn-save btn-lg" type="submit" id="save">Save</a>-->
-      <a href="#" class="btn btn-next btn-lg" id="signbutton2">Next</a>
+      <a href="#" class="btn btn-next btn-lg" id="signbutton">Next</a>
     </div>
    <!-- End of Button Section for 2nd step -->
 
@@ -1448,8 +1452,8 @@ function Calc2(v)
 
   <!-- Button section for 3rd step-->
   <div class="text-right">
-    <a href="#" class="btn btn-prev btn-lg" id="signbutton2">Previous</a>
-    <a href="#" class="btn btn-next btn-lg" id="signbutton2">Next</a>
+    <a href="#" class="btn btn-prev btn-lg" id="signbutton">Previous</a>
+    <a href="#" class="btn btn-next btn-lg" id="signbutton">Next</a>
   </div>
  <!-- End of Button Section for 3rd step -->
 
@@ -1499,7 +1503,7 @@ function Calc2(v)
                             <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
                             <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
                             <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td><button type="button" class="btn btn-nd btn-warning" onclick="AddApprentice()">+</button></td>
+                            <td><button type="button" class="btn btn-md btn-warning" onclick="AddApprentice()">+</button></td>
                           </tr>
                           <tr id="approw" class="d-none">
                             <th scope="row" hidden>1</th>
@@ -1559,9 +1563,9 @@ function Calc2(v)
 
            <!-- Button section for 4th step-->
      <div class="text-right">
-      <a href="#" class="btn btn-prev btn-lg" id="signbutton2">Previous</a>
+      <a href="#" class="btn btn-prev btn-lg" id="signbutton">Previous</a>
       <!--<a href="#" class="btn btn-save btn-lg" type="submit" id="save">Save</a>-->
-      <a href="#" class="btn btn-lg" id="signbutton2" value="Submit">Summary</a>
+      <a href="#" class="btn btn-lg" id="signbutton" value="Submit">Summary</a>
     </div>
    <!-- End of Button Section for 4th step -->
 
@@ -1577,13 +1581,13 @@ function Calc2(v)
       </div> <!--End of Container-->
     </form> <!--End of Form-->
       <br>
-              </section>
+    </section>
 
-              <script>
+   <script>
 
-                // script for progress bar
+  //Script for progress bar
 
-                const prevBtns = document.querySelectorAll(".btn-prev");
+    const prevBtns = document.querySelectorAll(".btn-prev");
     const nextBtns = document.querySelectorAll(".btn-next");
     const progress = document.getElementById("progress");
     const formSteps = document.querySelectorAll(".form-step");
@@ -1632,10 +1636,10 @@ function Calc2(v)
     }
 
 
-                //End of script for progress bar
+  //End of script for progress bar
 
 
-//Calculation for Total
+//Calculation for All the Total
 function GetTotal()
 {
    //To get the total of local
@@ -1687,6 +1691,7 @@ function GetTotal()
     var totallocal = sum_mlocal + sum_slocal + sum_sklocal + sum_nsklocal + sum_alocal;
     document.getElementById("total_local").value = totallocal;
     //console.log(totallocal);
+
     //End of the total of local
 
     //To get the total of non-local
@@ -1738,6 +1743,7 @@ function GetTotal()
     var totalnonlocal = sum_mnonlocal + sum_snonlocal + sum_sknonlocal + sum_nsknonlocal + sum_anonlocal;
     document.getElementById("total_nonlocal").value = totalnonlocal;
     //console.log(totalnonlocal);
+
     //End of the total of non-local
 
     //To get the total of SAWP
@@ -1789,6 +1795,7 @@ function GetTotal()
     var totalsawp = sum_msawp + sum_ssawp + sum_sksawp + sum_nsksawp + sum_asawp;
     document.getElementById("total_sawp").value = totalsawp;
     //console.log(totalsawp);
+
     //End of the total of SAWP
 
 
@@ -1803,6 +1810,7 @@ function GetTotal()
    document.getElementById("local_pct").value = pct;
     //End of the total worce local percentage
 
+
     //To get the total of local recruitment
     var sumlocal=0;
     var localthisyear =  document.getElementsByName("total_thisyr");
@@ -1815,6 +1823,7 @@ function GetTotal()
 
     document.getElementById("new_local").value = sumlocal;
     //console.log(sumlocal);
+
     //End of the total of local recruitment
 
      //To get the total of non-local recruitment
@@ -1829,6 +1838,7 @@ function GetTotal()
 
     document.getElementById("new_nonlocal").value = sumnonlocal;
     //console.log(sumnonlocal);
+
     //End of the total of non-local recruitment
 
      //To get the total recruitment
@@ -1843,7 +1853,9 @@ function GetTotal()
     //End of the total recruitment percentage
 
 
-   //Content break down for employment
+   //Content break down 
+   
+   //Calculation for spend employment in brunei
      var sumemplocal=0;
     var localemployment =  document.getElementsByName("local_spendin");
 
@@ -1852,7 +1864,6 @@ function GetTotal()
         var local_spendin = localemployment[index].value;
         sumemplocal = +(sumemplocal) +  +(local_spendin) ; 
     }
-
 
     var sumempnonlocal=0;
     var nonlocalemployment =  document.getElementsByName("nonlocal_spendin");
@@ -1863,12 +1874,13 @@ function GetTotal()
         sumempnonlocal = +(sumempnonlocal) +  +(nonlocal_spendin) ; 
     }
 
-
     var total_employment = sumemplocal + sumempnonlocal;
     var test7 = total_employment.toFixed(2);
     document.getElementById("totalempspendin").value = test7;
 
-    //////////////////////////////////////////////////
+    //End of calculation for spend employment out of brunei
+
+    //Calculation for spend employment out brunei
     
     var sumemplocalout=0;
     var localemploymentout =  document.getElementsByName("local_spendout");
@@ -1879,7 +1891,6 @@ function GetTotal()
         sumemplocalout = +(sumemplocalout) +  +(local_spendout) ; 
     }
 
-
     var sumempnonlocalout=0;
     var nonlocalemploymentout =  document.getElementsByName("nonlocal_spendout");
 
@@ -1888,7 +1899,6 @@ function GetTotal()
         var nonlocal_spendout = nonlocalemploymentout[index].value;
         sumempnonlocalout = +(sumempnonlocalout) +  +(nonlocal_spendout) ; 
     }
-
 
     var total_employmentout = sumemplocalout + sumempnonlocalout;
     var test8 = total_employmentout.toFixed(2);
@@ -1902,10 +1912,10 @@ function GetTotal()
    var emppct = Math.round(employmentpct * 10) / 10;
    document.getElementById("pctspendin").value = emppct;
 
-   //End of content break down for employment
+   //End of calculation for spend employment out brunei
 
 
-//Content break down for goods
+   //Calculation for spend goods
      var sum_manufactured=0;
     var manufactured_in =  document.getElementsByName("manufactured");
 
@@ -1924,12 +1934,9 @@ function GetTotal()
         sum_purchase = +(sum_purchase) +  +(purchase_spendin) ; 
     }
 
-
     var totalgoods_in = sum_manufactured + sum_purchase;
     var test10 = totalgoods_in.toFixed(2);
     document.getElementById("spendingoods").value = test10;
-
-    //////////////////////////////////////////////////
     
     var sum_purchaseout=0;
     var purchase_out =  document.getElementsByName("purchase_spendout");
@@ -1939,8 +1946,6 @@ function GetTotal()
         var purchase_spendout = purchase_out[index].value;
         sum_purchaseout = +(sum_purchaseout) +  +(purchase_spendout) ; 
     }
-
-    //////////////////////////////////////
 
     var totalgoods_out = sum_purchaseout;
     document.getElementById("spendoutgoods").value = totalgoods_out;
@@ -1953,11 +1958,13 @@ function GetTotal()
    var pct_g = Math.round(pctofgoods * 10) / 10;
    document.getElementById("goodspct").value = pct_g;
 
-   //End of content break down for goods
+   //End of calculation for spend goods
 
    ////////////////////////////////////////////////////////////
 
-   //Total Spend in Brunei Calculation
+   //Calculation for Total Spend summary
+
+   //Calculation for total spend in brunei
 
    var sum_emp=0;
     var emp =  document.getElementsByName("total_emp_spendin");
@@ -2004,7 +2011,6 @@ function GetTotal()
 
 //Total spend out of Brunei calculation
 
-
 var sum_empout=0;
     var empout =  document.getElementsByName("total_emp_spendout");
 
@@ -2046,7 +2052,6 @@ var sum_empout=0;
     var test13 = totalspendoutbrunei.toFixed(2);
     document.getElementById("totalout").value = test13;
 
-
 // End of total spend out of Brunei calculation
 
 var totalspendsummary = totalspendinbrunei + totalspendoutbrunei;
@@ -2060,15 +2065,19 @@ var pctspend = (totalspendinbrunei / totalspendsummary) * 100;
 
 }
 
-//End of Total Calculation
+//End of Total spend summary calculation
 
 
-                </script>
+  </script>
 
      <!--jQuery and Bootstrap Bundle (includes Popper) -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
   </body>
+  
 </html>

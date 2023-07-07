@@ -5,11 +5,10 @@ html, body{
 
 #menu{
     background-color: #E1E1E1;
-    position:fixed;
+    position: fixed;
     z-index: 100;
 
 }
-
 
 #title{
 
@@ -37,6 +36,7 @@ html, body{
   border-radius: 10px;
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 20px;
   font-size: 14px;
   margin-top: 70px;
   margin-bottom: 40px;

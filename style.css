@@ -251,22 +251,12 @@
 }
 
 #signbutton{
-  background-color: #FF735C;
-  color: azure;
-  border-radius: 5px;
-}
-
-#signbutton:hover{
-  background-color: #385A64;
-}
-
-#signbutton2{
   background-color: #F7D117;
   color: azure;
   border-radius: 5px;
 }
 
-#signbutton2:hover{
+#signbutton:hover{
   background-color: #D42E12;
 }
 
@@ -471,4 +461,15 @@ table{
   overflow-x: scroll;
   width: 95%;
   margin: 8px auto;
+}
+
+#viewbtn{
+  background-color: #DE8703;
+  color: azure;
+  border-radius: 5px;
+}
+
+#viewbtn:hover{
+  background-color: #EDDDC1;
+  color: #000;
 }
