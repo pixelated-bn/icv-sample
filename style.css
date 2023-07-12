@@ -90,6 +90,7 @@
   pointer-events: none;
   transition: 0s;
 }
+
 .sidebar li:hover .tooltip{
   opacity: 1;
   pointer-events: auto;
@@ -426,24 +427,24 @@ table{
 
 #force_table{
   overflow-x: scroll;
-  width: 960px;
+  width: 930px;
   margin: 8px auto;
 }
 
 #leavers_table{
   overflow-x: scroll;
-  width: 960px;
+  width: 930px;
 }
 
 #content_table{
   overflow-x: scroll;
-  width: 960px;
+  width: 930px;
   margin: 8px auto;
 }
 
 #sub_table{
   overflow-x: scroll;
-  width: 960px;
+  width: 900px;
   margin: 8px auto;
 }
 
