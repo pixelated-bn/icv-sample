@@ -428,7 +428,7 @@ table{
 #force_table{
   overflow-x: scroll;
   width: 930px;
-  margin: 8px auto;
+  margin: 5px auto;
 }
 
 #leavers_table{
@@ -444,13 +444,13 @@ table{
 
 #sub_table{
   overflow-x: scroll;
-  width: 900px;
-  margin: 8px auto;
+  width: 930px;
+  margin: 5px auto;
 }
 
 #spend_table{
   overflow-x: scroll;
-  width: 95%;
+  width: 100%;
   margin: 8px auto;
 }
 

@@ -199,16 +199,16 @@ function menuBtnChange() {
                  <div class="card-header">
                    <ul class="nav nav-tabs card-header-tabs">
                      <li class="nav-item">
-                       <a class="nav-link active" style="color: #DE8703; font-weight: bold;" data-toggle="tab" href="#tab1">Section 1</a>
+                       <a class="nav-link active" style="color: #DE8703; font-weight: bold;" data-toggle="tab" href="#tab1">Work Force Break Down</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab2">Section 2</a>
+                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab2">Recruitment and Leavers</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab3">Section 3</a>
+                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab3">Content Break Down</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab4">Section 4</a>
+                       <a class="nav-link" data-toggle="tab" style="color: #DE8703; font-weight: bold;" href="#tab4">Apprenticeship Program</a>
                      </li>
                    </ul>
                  </div>
@@ -222,20 +222,20 @@ function menuBtnChange() {
                       <li>
                         <input type="radio" name="tab" id="first" checked>
                       <label for="first"> Existing Management </label>
-                        <div class="content"><br>
+                        <div class="content">
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
                                     <thead>
                                       <tr>
                                         <th hidden>#</th>
-                                          <th style="width: 40%;">Job Position</th>
+                                          <th style="width: 35%;">Job Position</th>
                                           <th>Local</th>
                                           <th>Non-Local</th>
                                           <th>SAWP</th>
                                           <th>Total</th>
                                           <th>% Local</th>
-                                          <th style="width: 5%;"></th>
+                                          <th style="width: 6%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="mbody">
@@ -245,9 +245,9 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
-                                        <td><button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">+</button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="" disabled=""></td>
+                                        <td></td>
                                       </tr>
                                       <tr id="mrow" class="d-none">
                                         <th scope="row" hidden>1</th>
@@ -255,14 +255,15 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="0" disabled=""></td>
-                                        <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelManagement(this)"><i class="fa fa-trash"></i></button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="" disabled=""></td>
+                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelManagement(this)"><i class="fa fa-trash"></i></button></td>
                                       </tr>
                                     </tbody>
                                 </table>
                               </div>
                               <div class="text-right">
+                                <button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">Add New Row</button>
                                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                               </div>
                               
@@ -286,7 +287,7 @@ function menuBtnChange() {
                 {
                     /*Delete Button*/
                        $(v).parent().parent().remove(); 
-                       GetTotal();
+                       GetWorks();
                 
                         $("#mbody").find("tr").each(
                         function(index)
@@ -308,14 +309,14 @@ function menuBtnChange() {
                     var m_nonlocal = parseFloat(document.getElementsByName("m_nonlocal")[index].value);
                     var m_sawp = parseFloat(document.getElementsByName("m_sawp")[index].value);
                 
-                    var m_total = m_local + m_nonlocal + m_sawp;
+                    var m_total = m_local + m_nonlocal;
                     parseFloat(document.getElementsByName("m_total")[index].value = m_total);
                 
                     var mlocalpct = (m_local / m_total) * 100;
                     var mpct = Math.round(mlocalpct * 10) / 10;
                     parseFloat(document.getElementsByName("m_localpct")[index].value = mpct);
                 
-                    GetTotal();
+                    GetWorks();
                 
                 
                 }
@@ -329,20 +330,20 @@ function menuBtnChange() {
                 <li>
                   <input type="radio" name="tab" id="second">
                 <label for="second"> Existing Supervisor </label>
-                  <div class="content"><br>
+                  <div class="content">
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
                                     <thead>
                                       <tr>
                                         <th scope="col" hidden>#</th>
-                                          <th style="width: 40%;">Job Position</th>
+                                          <th style="width: 35%;">Job Position</th>
                                           <th scope="col">Local</th>
                                           <th scope="col">Non-Local</th>
                                           <th scope="col">SAWP</th>
                                           <th scope="col">Total</th>
                                           <th scope="col">% Local</th>
-                                          <th style="width: 5%;"></th>
+                                          <th style="width: 6%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="sbody">
@@ -352,9 +353,9 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
-                                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddSupervisor()">+</button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="" disabled=""></td>
+                                        <td></td>
                                       </tr>
                                       <tr id="srow" class="d-none">
                                         <th scope="row" hidden>1</th>
@@ -362,14 +363,15 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="0" disabled=""></td>
-                                        <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSupervisor(this)"><i class="fa fa-trash"></i></button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="" disabled=""></td>
+                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSupervisor(this)"><i class="fa fa-trash"></i></button></td>
                                       </tr>
                                     </tbody>
                                 </table>
                               </div>
                               <div class="text-right">
+                                <button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">Add New Row</button>
                                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                               </div>
                               </div>
@@ -393,7 +395,7 @@ function menuBtnChange() {
                 {
                     /*Delete Button*/
                        $(v).parent().parent().remove(); 
-                       GetTotal();
+                       GetWorks();
                 
                         $("#sbody").find("tr").each(
                         function(index)
@@ -416,14 +418,14 @@ function menuBtnChange() {
                     var s_nonlocal = parseFloat(document.getElementsByName("s_nonlocal")[index].value);
                     var s_sawp = parseFloat(document.getElementsByName("s_sawp")[index].value);
                 
-                    var s_total = s_local + s_nonlocal + s_sawp;
+                    var s_total = s_local + s_nonlocal;
                     parseFloat(document.getElementsByName("s_total")[index].value = s_total);
                 
                     var slocalpct = (s_local / s_total) * 100;
                     var spct = Math.round(slocalpct * 10) / 10;
                     parseFloat(document.getElementsByName("s_localpct")[index].value = spct);
                 
-                    GetTotal();
+                    GetWorks();
                 }
                 
                     </script>
@@ -432,20 +434,20 @@ function menuBtnChange() {
                       <li>
                         <input type="radio" name="tab" id="third">
                       <label for="third"> Existing Skilled </label>
-                        <div class="content"><br>
+                        <div class="content">
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
                                     <thead>
                                       <tr>
                                         <th scope="col" hidden>#</th>
-                                          <th style="width: 30%;">Job Position</th>
+                                          <th style="width: 35%;">Job Position</th>
                                           <th scope="col">Local</th>
                                           <th scope="col">Non-Local</th>
                                           <th scope="col">SAWP</th>
                                           <th scope="col">Total</th>
                                           <th scope="col">% Local</th>
-                                          <th style="width: 5%;"></th>
+                                          <th style="width: 6%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="skbody">
@@ -455,9 +457,9 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
-                                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddSkilled()">+</button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="" disabled=""></td>
+                                        <td></td>
                                       </tr>
                                       <tr id="skrow" class="d-none">
                                         <th scope="row" hidden>1</th>
@@ -465,14 +467,15 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="0" disabled=""></td>
-                                        <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSkilled(this)"><i class="fa fa-trash"></i></button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="" disabled=""></td>
+                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSkilled(this)"><i class="fa fa-trash"></i></button></td>
                                       </tr>
                                     </tbody>
                                 </table>
                               </div>
                               <div class="text-right">
+                                <button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">Add New Row</button>
                                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                               </div>
                               </div>
@@ -495,7 +498,7 @@ function menuBtnChange() {
                                   {
                                       /*Delete Button*/
                                          $(v).parent().parent().remove(); 
-                                         GetTotal();
+                                         GetWorks();
                                   
                                           $("#skbody").find("tr").each(
                                           function(index)
@@ -518,14 +521,14 @@ function menuBtnChange() {
                                       var sk_nonlocal = parseFloat(document.getElementsByName("sk_nonlocal")[index].value);
                                       var sk_sawp = parseFloat(document.getElementsByName("sk_sawp")[index].value);
                                   
-                                      var sk_total = sk_local + sk_nonlocal + sk_sawp;
+                                      var sk_total = sk_local + sk_nonlocal;
                                       parseFloat(document.getElementsByName("sk_total")[index].value = sk_total);
                                   
                                       var sklocalpct = (sk_local / sk_total) * 100;
                                       var skpct = Math.round(sklocalpct * 10) / 10;
                     parseFloat(document.getElementsByName("sk_localpct")[index].value = skpct);
                                   
-                                      GetTotal();
+                    GetWorks();
                                   }
                                   
                                       </script>
@@ -534,20 +537,20 @@ function menuBtnChange() {
                       <li>
                         <input type="radio" name="tab" id="fourth">
                       <label for="fourth"> Existing Non-Skilled </label>
-                        <div class="content"><br>
+                        <div class="content">
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
                                     <thead>
                                       <tr>
                                         <th scope="col" hidden>#</th>
-                                          <th style="width: 30%;">Job Position</th>
+                                          <th style="width: 35%;">Job Position</th>
                                           <th scope="col">Local</th>
                                           <th scope="col">Non-Local</th>
                                           <th scope="col">SAWP</th>
                                           <th scope="col">Total</th>
                                           <th scope="col">% Local</th>
-                                          <th style="width: 5%;"></th>
+                                          <th style="width: 6%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="nskbody">
@@ -557,9 +560,9 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
-                                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddNonSkilled()">+</button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="" disabled=""></td>
+                                        <td></td>
                                       </tr>
                                       <tr id="nskrow" class="d-none">
                                         <th scope="row" hidden>1</th>
@@ -567,14 +570,15 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="0" disabled=""></td>
-                                        <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelNonSkilled(this)"><i class="fa fa-trash"></i></button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="" disabled=""></td>
+                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelNonSkilled(this)"><i class="fa fa-trash"></i></button></td>
                                       </tr>
                                     </tbody>
                                 </table>
                               </div>
                               <div class="text-right">
+                                <button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">Add New Row</button>
                                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                               </div>
                               </div>
@@ -597,7 +601,7 @@ function menuBtnChange() {
                                   {
                                       /*Delete Button*/
                                          $(v).parent().parent().remove(); 
-                                         GetTotal();
+                                         GetWorks();
                                   
                                           $("#nskbody").find("tr").each(
                                           function(index)
@@ -620,14 +624,14 @@ function menuBtnChange() {
                                       var nsk_nonlocal = parseFloat(document.getElementsByName("nsk_nonlocal")[index].value);
                                       var nsk_sawp = parseFloat(document.getElementsByName("nsk_sawp")[index].value);
                                   
-                                      var nsk_total = nsk_local + nsk_nonlocal + nsk_sawp;
+                                      var nsk_total = nsk_local + nsk_nonlocal;
                                       parseFloat(document.getElementsByName("nsk_total")[index].value = nsk_total);
                                   
                                       var nsklocalpct = (nsk_local / nsk_total) * 100;
                                       var nskpct = Math.round(nsklocalpct * 10) / 10;
                     parseFloat(document.getElementsByName("nsk_localpct")[index].value = nskpct);
                                   
-                                      GetTotal();
+                    GetWorks();
                                   }
                                   
                                       </script>
@@ -636,20 +640,20 @@ function menuBtnChange() {
                       <li>
                         <input type="radio" name="tab" id="fifth">
                       <label for="fifth"> Existing Admin & Account </label>
-                        <div class="content"><br>
+                        <div class="content">
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
                                     <thead>
                                       <tr>
                                         <th scope="col" hidden>#</th>
-                                          <th style="width: 30%;">Job Position</th>
+                                          <th style="width: 35%;">Job Position</th>
                                           <th scope="col">Local</th>
                                           <th scope="col">Non-Local</th>
                                           <th scope="col">SAWP</th>
                                           <th scope="col">Total</th>
                                           <th scope="col">% Local</th>
-                                          <th style="width: 5%;"></th>
+                                          <th style="width: 6%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="aabody">
@@ -659,9 +663,9 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
-                                        <td><button type="button" class="btn btn-md btn-warning" onclick="AddAdmAcc()">+</button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="" disabled=""></td>
+                                        <td></td>
                                       </tr>
                                       <tr id="aarow" class="d-none">
                                         <th scope="row" hidden>1</th>
@@ -669,14 +673,15 @@ function menuBtnChange() {
                                         <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
                                         <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="0" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="0" disabled=""></td>
-                                        <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelAdmAcc(this)"><i class="fa fa-trash"></i></button></td>
+                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="" disabled=""></td>
+                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="" disabled=""></td>
+                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelAdmAcc(this)"><i class="fa fa-trash"></i></button></td>
                                       </tr>
                                     </tbody>
                                 </table>
                               </div>
                               <div class="text-right">
+                                <button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">Add New Row</button>
                                 <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                               </div>
                               </div>
@@ -699,7 +704,7 @@ function menuBtnChange() {
                                   {
                                       /*Delete Button*/
                                          $(v).parent().parent().remove(); 
-                                         GetTotal();
+                                         GetWorks();
                                   
                                           $("#aabody").find("tr").each(
                                           function(index)
@@ -722,14 +727,14 @@ function menuBtnChange() {
                                       var a_nonlocal = parseFloat(document.getElementsByName("a_nonlocal")[index].value);
                                       var a_sawp = parseFloat(document.getElementsByName("a_sawp")[index].value);
                                   
-                                      var a_total = a_local + a_nonlocal + a_sawp;
+                                      var a_total = a_local + a_nonlocal;
                                       parseFloat(document.getElementsByName("a_total")[index].value = a_total);
                                   
                                       var alocalpct = (a_local / a_total) * 100;
                                       var apct = Math.round(alocalpct * 10) / 10;
                     parseFloat(document.getElementsByName("a_localpct")[index].value = apct);
                                   
-                                      GetTotal();
+                    GetWorks();
                                   }
                                   
                                       </script>
@@ -801,8 +806,8 @@ function menuBtnChange() {
           </tr>
           <tr>
               <td>Total</td>
-            <td><input type="number" class="form-control shadow-none" name="total_todate" id="totaltodate" value="0" disabled=""></td>
-            <td><input type="number" class="form-control shadow-none" name="total_thisyr" id="totalthisyr" value="0" disabled></td>
+            <td><input type="number" class="form-control shadow-none" name="total_todate" id="totaltodate" value="" disabled=""></td>
+            <td><input type="number" class="form-control shadow-none" name="total_thisyr" id="totalthisyr" value="" disabled></td>
           </tr>
         </tbody>
       </table>
@@ -852,7 +857,7 @@ function menuBtnChange() {
                              parseFloat(document.getElementsByName("total_thisyr")[index].value = totalhirelocalthisyr);
                             
                           
-                             GetTotal();
+                             GetHires();
                           
                           }
         
@@ -918,8 +923,8 @@ function menuBtnChange() {
                       </tr>
                       <tr>
                           <td>Total</td>
-                        <td><input type="number" class="form-control shadow-none" name="nontotal_todate" id="totaltodate" value="0" disabled=""></td>
-                        <td><input type="number" class="form-control shadow-none" name="nontotal_thisyr" id="totalthisyr" value="0" disabled></td>
+                        <td><input type="number" class="form-control shadow-none" name="nontotal_todate" id="totaltodate" value="" disabled=""></td>
+                        <td><input type="number" class="form-control shadow-none" name="nontotal_thisyr" id="totalthisyr" value="" disabled></td>
                       </tr>
                     </tbody>
                   </table>
@@ -970,7 +975,7 @@ function menuBtnChange() {
                              parseFloat(document.getElementsByName("nontotal_thisyr")[index].value = totalhirenonlocalthisyr);
                              console.log(totalhirenonlocalthisyr);
 
-                             GetTotal();
+                             GetHires();
                           
                           
                           }
@@ -1003,7 +1008,7 @@ function menuBtnChange() {
                           <td><input type="number" class="form-control shadow-none" name="localterminate" id="terminate" onkeyup="Calc10(this);"></td>
                           <td><input type="number" class="form-control shadow-none" name="localtransfer" id="transfer" onkeyup="Calc10(this);"></td>
                           <td><input type="number" class="form-control shadow-none" name="localothers" id="others" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localleavers" id="totallocalleave" value="0" disabled></td>
+                          <td><input type="number" class="form-control shadow-none" name="localleavers" id="totallocalleave" value="" disabled></td>
                         </tr>
                       </tbody>
                       </table>
@@ -1058,7 +1063,7 @@ function menuBtnChange() {
                         <td><input type="number" class="form-control shadow-none" name="nonlocalterminate" id="terminate" onkeyup="Calc11(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nonlocaltransfer" id="transfer" onkeyup="Calc11(this);"></td>
                         <td><input type="number" class="form-control shadow-none" name="nonlocalothers" id="others" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalleavers" id="totalnonlocalleave" value="0" disabled></td>
+                        <td><input type="number" class="form-control shadow-none" name="nonlocalleavers" id="totalnonlocalleave" value="" disabled></td>
                       </tr>
                     </tbody>
                     </table>
@@ -1189,7 +1194,7 @@ function menuBtnChange() {
                     var localspendpct = Math.round(spendin_localpct * 10) / 10;
                     parseFloat(document.getElementsByName("pct_localemp")[index].value = localspendpct);
                       
-                    GetTotal();
+                    GetSpends();
                       
                       }
           
@@ -1209,7 +1214,7 @@ function menuBtnChange() {
                     var nonspendpct = Math.round(spendin_nonpct * 10) / 10;
                     parseFloat(document.getElementsByName("pct_nonlocalemp")[index].value = nonspendpct);
                       
-                    GetTotal();
+                    GetSpends();
                       
                       }
           
@@ -1264,7 +1269,7 @@ function menuBtnChange() {
                         var trainpct = Math.round(trainingpct * 10) / 10;
                         parseFloat(document.getElementsByName("pct_training")[index].value = trainpct);
                           
-                      GetTotal();
+                      GetSpends();
                           
                           }
                           </script>
@@ -1338,7 +1343,7 @@ function menuBtnChange() {
                     var pctman = Math.round(pct_man * 10) / 10;
                     parseFloat(document.getElementsByName("pct_manufactured")[index].value = pctman);
                       
-                    GetTotal();
+                    GetSpends();
                       
                       }
           
@@ -1358,7 +1363,7 @@ function menuBtnChange() {
                     var purcpct = Math.round(pctpurchase * 10) / 10;
                     parseFloat(document.getElementsByName("purchase_pct")[index].value = purcpct);
                       
-                    GetTotal();
+                    GetSpends();
                       
                       }
           
@@ -1413,7 +1418,7 @@ function menuBtnChange() {
                   var servpct = Math.round(pctservice * 10) / 10;
                   parseFloat(document.getElementsByName("service_pct")[index].value = servpct);
                     
-                GetTotal();
+                GetSpends();
                     
                     }
                     </script>
@@ -1447,7 +1452,7 @@ function menuBtnChange() {
                               <th style="width: 12%;">Qualification</th>
                               <th style="width: 12%;">Skill/Trade</th>
                               <th>Accreditation</th>
-                              <th style="width: 4%;"></th>
+                              <th style="width: 3%;"></th>
                             </tr>
                         </thead>
                         <tbody id="appbody">
@@ -1462,7 +1467,7 @@ function menuBtnChange() {
                             <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
                             <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
                             <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td><button type="button" class="btn btn-md btn-warning" onclick="AddApprentice()">+</button></td>
+                            <td></td>
                           </tr>
                           <tr id="approw" class="d-none">
                             <th scope="row" hidden>1</th>
@@ -1475,12 +1480,13 @@ function menuBtnChange() {
                             <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
                             <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
                             <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelApprentice(this)"><i class="fa fa-trash"></i></button></td>
+                            <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelApprentice(this)"><i class="fa fa-trash"></i></button></td>
                           </tr>
                         </tbody>
                     </table>
                   </div>
                     <div class="text-right">
+                      <button type="button" class="btn btn-md btn-warning" onclick="AddApprentice()">Add New Row</button>
                       <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
                     </div>
             </div>
@@ -1508,7 +1514,6 @@ function menuBtnChange() {
             {
                 /*Delete Button*/
                    $(v).parent().parent().remove(); 
-                   //GetTotal();
             
                     $("#appbody").find("tr").each(
                     function(index)
@@ -1542,7 +1547,7 @@ function menuBtnChange() {
 
 
 //Calculation for All the Total
-function GetTotal()
+function GetWorks()
 {
    //To get the total of local
     var sum_mlocal=0;
@@ -1702,7 +1707,7 @@ function GetTotal()
 
 
     //To get the total work force
-    var totalforce = totallocal + totalnonlocal +totalsawp;
+    var totalforce = totallocal + totalnonlocal;
     document.getElementById("totalforce").value = totalforce;
     //End of the total work force
 
@@ -1710,8 +1715,12 @@ function GetTotal()
    var localpct = (totallocal / totalforce) * 100;
    var pct = Math.round(localpct * 10) / 10;
    document.getElementById("local_pct").value = pct;
-    //End of the total worce local percentage
+    //End of the total work force local percentage
 
+  }
+
+  function GetHires()
+{
 
     //To get the total of local recruitment
     var sumlocal=0;
@@ -1754,6 +1763,10 @@ function GetTotal()
    document.getElementById("new_localpct").value = recruitpct;
     //End of the total recruitment percentage
 
+  }
+
+  function GetSpends()
+  {
 
    //Content break down 
    
