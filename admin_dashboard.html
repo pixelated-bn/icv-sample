@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+    <title>ICV Report</title>
+
+  </head>
+
+  <body>
+
+    <div class="sidebar open">
+      <div class="logo-details">
+        <div class="logo_name">ICV System</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="admin_dashboard.html" style="background-color:#dddddd;">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="">
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">New registration</span>
+          </a>
+          <span class="tooltip">New registration</span>
+        </li>
+        <li>
+          <a href="">
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Vendors</span>
+          </a>
+          <span class="tooltip">Vendors</span>
+        </li>
+        <li>
+          <a href="">
+            <i class='bx bx-file-blank'></i>
+            <span class="links_name">Business Partner</span>
+          </a>
+          <span class="tooltip">Business Partner</span>
+        </li>
+        <li>
+          <a href="">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Report</span>
+          </a>
+          <span class="tooltip">Report</span>
+        </li>
+        <li>
+            <a href="index.html">
+              <i class="bx bx-log-out"></i>
+              <span class="links_name">Log Out</span>
+            </a>
+            <span class="tooltip">Log Out</span>
+          </li>
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name">Company Name</div>
+              <div class="job">ID 007</div>
+            </div>
+          </div>
+          <i class="bx bx-buildings" id="log_out"><a href=""></a></i>
+        </li>
+      </ul>
+    </div>
+    
+<script>
+
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
+
+</script>
+
+<section class="home-section">
+    <div class="text">Dashboard</div>
+
+    <div class="container">
+        <div class="card">
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                  <div class="card text-white" style="background-color: #0099BA;">
+                    <div class="card-body">
+                      <h5 class="card-title">Registration</h5>
+                      <p class="card-text">New registration on the system.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card text-white" style="background-color: #BAD405;">
+                    <div class="card-body">
+                      <h5 class="card-title">Vendor</h5>
+                      <p class="card-text">There are 300 registered supplier.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card text-white" style="background-color: #00824A;">
+                      <div class="card-body">
+                        <h5 class="card-title">Business Partner</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-sm-3">
+                    <div class="card text-white" style="background-color: #611759;">
+                      <div class="card-body">
+                        <h5 class="card-title">Sample</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <br>
+              
+            <script src="js/chart.min.js"></script>
+       
+     
+
+            <div class="card-body"  style="padding-bottom: 33px;">
+              <h3>Graph or Chart</h3>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="containerz">
+                      <br>
+                    <h5 style="text-align: center;">Pie Chart</h5>
+                    <div>
+                        <canvas id="pie-chart"></canvas>
+                    </div><br>
+                </div></div>
+                  <div class="col-sm-4">
+                    <div class="containerz">
+                      <br>
+                      <h5 style="text-align: center;">Bar Chart</h5>
+                      <br><br><br>
+                      <div>
+                          <canvas id="bar-chart"></canvas>
+                      </div>
+                      <br><br><br><br>
+                  </div></div>
+                  <div class="col-sm-4">
+                    <div class="containerz">
+                      <br>
+                      <h5 style="text-align: center;">Polar Area Chart</h5>
+                      <div>
+                          <canvas id="polar-area"></canvas>
+                      </div><br>
+                  </div></div>
+              
+            <script src="js/chart.min.js"></script>
+            <script>
+        
+                new Chart(document.getElementById('pie-chart'), {
+                    type : 'pie',
+                    data : {
+                        labels : ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
+                        datasets : [{
+                            backgroundColor : [ "#385A64", "#FF735C",
+                      "#E1E1E1", "#1A2E35", "#326998" ],
+                            data : [418, 263, 434, 586, 332]
+                        }]
+                    },
+                    options : {
+                        title : {
+                            display : true,
+                            text : 'Pie Chart for admin panel'
+                        },
+                        responsive : true
+                    }
+                });
+            </script>
+              <script>
+        
+                new Chart(document.getElementById('bar-chart'), {
+                    type : 'bar',
+                    data : {
+                        labels : ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
+                        datasets : [{
+                            backgroundColor : [ "#385A64", "#FF735C",
+                      "#E1E1E1", "#1A2E35", "#326998" ],
+                            data : [418, 263, 434, 586, 332]
+                        }]
+                    },
+                    options : {
+                        title : {
+                            display : true,
+                            text : 'Pie Chart for admin panel'
+                        },
+                        responsive : true
+                    }
+                });
+            </script>
+             <script>
+        
+              new Chart(document.getElementById('polar-area'), {
+                  type : 'polarArea',
+                  data : {
+                      labels : ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
+                      datasets : [{
+                          backgroundColor : [ "#385A64", "#FF735C",
+                      "#E1E1E1", "#1A2E35", "#326998" ],
+                          data : [418, 263, 434, 586, 332]
+                      }]
+                  },
+                  options : {
+                      title : {
+                          display : true,
+                          text : 'Pie Chart for admin panel'
+                      },
+                      responsive : true
+                  }
+              });
+          </script>
+          
+            </div>
+          </div>
+        </div>
+        </div>
+        <br>
+  </section>
+
+  <script src="js/script.js"></script>
+
+     <!--jQuery and Bootstrap Bundle (includes Popper) -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  </body>
+</html>

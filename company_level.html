@@ -59,8 +59,8 @@
         <li class="profile">
           <div class="profile-details">
             <div class="name_job">
-              <div class="name">Company Name</div>
-              <div class="job">ID 007</div>
+              <div class="name"> Company Name</div>
+              <div class="job">Vendor ID</div>
             </div>
           </div>
           <i class="bx bx-buildings" id="log_out"><a href=""></a></i>
@@ -92,16 +92,13 @@ function menuBtnChange() {
 
     <section class="home-section">
       <div class="text">Company Level Form</div>
-      <form action="#" class="form" id="save-later-form">
 
       <div class="container">
         <div class="card">
-          
-          <h3 id="myId" style="display: none; text-align: center;">No Quarter Available</h3>
-          <h3 id="Q01" style="display: none; text-align: center;">Quarter 1</h3>
-          <h3 id="Q02" style="display: none; text-align: center;">Quarter 2</h3>
-          <h3 id="Q03" style="display: none; text-align: center;">Quarter 3</h3>
-          <h3 id="Q04" style="display: none; text-align: center;">Quarter 4</h3>
+          <br>
+          <h3 id="myId" style="display: none; text-align: center;"></h3>
+
+         
         
           <script>
 
@@ -113,85 +110,56 @@ function menuBtnChange() {
           if(day <= 22 && month == 4)
           {
              // document.write ("Date " +day + " Month " +month);
-              document.getElementById("Q01").style.display = 'block';
+              document.getElementById("myId").style.display = 'block';
               //var title = document.createElement("h3");
               //title.setAttribute = ("id", "Q01")
-              //var text = document.createTextNode("Quarter 1");
+              var text = document.createTextNode("Quarter 1");
               //title.appendChild(text);
-              //document.getElementById("quarter").appendChild(title);
+              document.getElementById("myId").appendChild(text);
           }
   
              else if(day <= 22 && month == 7) {
              //document.write ("Date " +day + " Month " +month);
-              document.getElementById("Q02").style.display = 'block';
+              document.getElementById("myId").style.display = 'block';
               //var title = document.createElement("h3");
               //title.setAttribute = ("id", "Q02")
-              //var text = document.createTextNode("Quarter 2");
+              var text = document.createTextNode("Quarter 2");
               //title.appendChild(text);
-             //document.getElementById("quarter").appendChild(title);
+             document.getElementById("myId").appendChild(text);
           }
   
           else if(day <= 22 && month == 10) {
             //document.write ("Date " +day + " Month " +month);
-              document.getElementById("Q03").style.display = 'none';
+              document.getElementById("myId").style.display = 'block';
               //var title = document.createElement("h3");
               //title.setAttribute = ("id", "Q03")
-              //var text = document.createTextNode("Quarter 3");
+              var text = document.createTextNode("Quarter 3");
               //title.appendChild(text);
-              //document.getElementById("quarter").appendChild(title);
+              document.getElementById("myId").appendChild(text);
           }
   
           else if(day <= 22 && month == 1) {
            // document.write ("Date " +day + " Month " +month);
-              document.getElementById("Q04").style.display = 'none';
+              document.getElementById("myId").style.display = 'block';
               //var title = document.createElement("h3");
               //title.setAttribute = ("id", "Q04")
-              //var text = document.createTextNode("Quarter 4");
+              var text = document.createTextNode("Quarter 4");
               //element.appendChild(text);
-              //document.getElementById("quarter").appendChild(title);
+              document.getElementById("myId").appendChild(text);
           }
   
           else {
             document.getElementById("myId").style.display = 'block';
+            var text = document.createTextNode("No Active Quarter");
+              //element.appendChild(text);
+              document.getElementById("myId").appendChild(text);
           }
   
           </script>
 
             <div class="card-body">
-
-            <div class="container" style="padding: 0px;">
-            <table class="table table-bordered table-responsive table-fixed">
-              <tr>
-                <th class="text-center" style="background-color: #58595B; color: #fff;" colspan="5">Total Work Force To Date</th>
-                <th class="text-center" style="background-color: #58595B; color: #fff;" colspan="4">Total Hires This Year</th>
-              </tr>
-              <tr>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Local</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Non-Local</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">SAWP</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Total</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">%Local</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Local</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Non-Local</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">Total</td>
-                <td class="text-center" style="background-color: #808285; font-weight:bold;">%Local</td>
-              </tr>
-              <tr>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totaloflocal" id="total_local" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalofnonlocal" id="total_nonlocal" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalofsawp" id="total_sawp" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalworkforce" id="totalforce" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="localpcttotal" id="local_pct" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewlocal" id="new_local" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewnonlocal" id="new_nonlocal" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalnewhire" id="new_total" disabled></td>
-                <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalpcthire" id="new_localpct" disabled></td>
-              </tr>
-            </table>
-          </div>
-
-
-          <div class="container" style="padding: 0px;">
+              
+          <div class="container">
             <div class="row">
               <div class="col-sm-12">
                <div class="card my-4">
@@ -216,323 +184,134 @@ function menuBtnChange() {
                  <div class="card-body tab-content">
                    <div class="tab-pane fade show active" id="tab1">
                   
-                        <h4>Section 1 - Work Force Break Down</h4>
-                        <hr>
-                        <ul class="accordion">
-                      <li>
-                        <input type="radio" name="tab" id="first" checked>
-                      <label for="first"> Existing Management </label>
-                        <div class="content">
-                            <!--  Bootstrap table-->
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="force_table">
-                                    <thead>
-                                      <tr>
-                                        <th hidden>#</th>
-                                          <th style="width: 35%;">Job Position</th>
-                                          <th>Local</th>
-                                          <th>Non-Local</th>
-                                          <th>SAWP</th>
-                                          <th>Total</th>
-                                          <th>% Local</th>
-                                          <th style="width: 6%;"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="mbody">
-                                      <tr>
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="" disabled=""></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr id="mrow" class="d-none">
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="m_position" id="mposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_local" id="mlocal" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_nonlocal" id="mnonlocal" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_sawp" id="msawp" onkeyup="Calc(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_total" id="mtotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="m_localpct" id="mlocalpct" value="" disabled=""></td>
-                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelManagement(this)"><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                              <div class="text-right">
-                                <button type="button" class="btn btn-nd btn-warning" onclick="AddManagement()">Add New Row</button>
-                                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                              </div>
-                              
-                </div>
-                </li>
-                          <script>
-                
-                //Function for adding new row
-                function AddManagement()
-                {
-                    /*Add Button*/
-                    var v = $("#mrow").clone().appendTo("#mbody") ;
-                    $(v).find("input").val('');
-                    $(v).removeClass("d-none");
-                    $(v).find("th").first().html($('mbody tr').length - 1);
-                }
-                //End of adding new row function
-                
-                //Function for deleting existing row
-                function DelManagement(v)
-                {
-                    /*Delete Button*/
-                       $(v).parent().parent().remove(); 
-                       GetWorks();
-                
-                        $("#mbody").find("tr").each(
-                        function(index)
-                        {
-                           $(this).find("th").first().html(index);
-                        }
-                
-                       );
-                }
-                //End of deleting existing row function
-                
-                   // Calculation for Existing Management Table
-                function Calc(v)
-                {
-                 
-                    var index = $(v).parent().parent().index();
-                    
-                    var m_local = parseFloat(document.getElementsByName("m_local")[index].value);
-                    var m_nonlocal = parseFloat(document.getElementsByName("m_nonlocal")[index].value);
-                    var m_sawp = parseFloat(document.getElementsByName("m_sawp")[index].value);
-                
-                    var m_total = m_local + m_nonlocal;
-                    parseFloat(document.getElementsByName("m_total")[index].value = m_total);
-                
-                    var mlocalpct = (m_local / m_total) * 100;
-                    var mpct = Math.round(mlocalpct * 10) / 10;
-                    parseFloat(document.getElementsByName("m_localpct")[index].value = mpct);
-                
-                    GetWorks();
-                
-                
-                }
-                
-                
-                             </script>
-                
-                
-                      
+                    <h4>Section 1 - Work Force Break Down</h4>
+                    <hr>
+                    <ul class="accordion">
+                  <li>
+                    <input type="radio" name="tab" id="first" checked>
+                  <label for="first"> Existing Management </label>
+                    <div class="content">
+                        <!--  Bootstrap table-->
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="force_table">
+                              <form action="" method="">
+                               
+                                  <tr>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                      <th style="width: 35%;">Job Position</th>
+                                      <th>Local</th>
+                                      <th>Non-Local</th>
+                                      <th>SAWP</th>
+                                    </tr>
+                                
+                               
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value=""></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="v_id" value=""></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="category" value="Existing Management"></td>
+                                <td><input type="text" class="form-control shadow-none" name="position"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="local"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="nonlocal"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="sawp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4">
+                                      <div class="text-right">
+                                    <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                                  </div>
+                                    </td>
+                                  </tr>
+                        </form>
+                            </table>
+                          </div>
+            </div>
+            </li>
                      
                 <li>
                   <input type="radio" name="tab" id="second">
                 <label for="second"> Existing Supervisor </label>
-                  <div class="content">
-                            <!--  Bootstrap table-->
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="force_table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col" hidden>#</th>
-                                          <th style="width: 35%;">Job Position</th>
-                                          <th scope="col">Local</th>
-                                          <th scope="col">Non-Local</th>
-                                          <th scope="col">SAWP</th>
-                                          <th scope="col">Total</th>
-                                          <th scope="col">% Local</th>
-                                          <th style="width: 6%;"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="sbody">
-                                      <tr>
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="" disabled=""></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr id="srow" class="d-none">
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="s_position" id="sposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_local" id="slocal" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_nonlocal" id="snonlocal" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_sawp" id="ssawp" onkeyup="Calc2(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_total" id="stotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="s_localpct" id="slocalpct" value="" disabled=""></td>
-                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSupervisor(this)"><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                              <div class="text-right">
-                                <button type="button" class="btn btn-nd btn-warning" onclick="AddSupervisor()">Add New Row</button>
-                                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                              </div>
-                              </div>
-                            </li>
-                
-                    <script>
-                
-                //Function for adding new row
-                function AddSupervisor()
-                {
-                    /*Add Button*/
-                    var v = $("#srow").clone().appendTo("#sbody") ;
-                    $(v).find("input").val('');
-                    (v).removeClass("d-none");
-                    $(v).find("th").first().html($('sbody tr').length - 1);
-                }
-                //End of adding new row function
-                
-                //Function for deleting existing row
-                function DelSupervisor(v)
-                {
-                    /*Delete Button*/
-                       $(v).parent().parent().remove(); 
-                       GetWorks();
-                
-                        $("#sbody").find("tr").each(
-                        function(index)
-                        {
-                           $(this).find("th").first().html(index);
-                        }
-                
-                       );
-                }
-                //End of deleting existing row function
-                
-                   // Calculation for Existing Management Table
-                   
-                function Calc2(v)
-                {
-                 
-                    var index = $(v).parent().parent().index();
-                    
-                    var s_local = parseFloat(document.getElementsByName("s_local")[index].value);
-                    var s_nonlocal = parseFloat(document.getElementsByName("s_nonlocal")[index].value);
-                    var s_sawp = parseFloat(document.getElementsByName("s_sawp")[index].value);
-                
-                    var s_total = s_local + s_nonlocal;
-                    parseFloat(document.getElementsByName("s_total")[index].value = s_total);
-                
-                    var slocalpct = (s_local / s_total) * 100;
-                    var spct = Math.round(slocalpct * 10) / 10;
-                    parseFloat(document.getElementsByName("s_localpct")[index].value = spct);
-                
-                    GetWorks();
-                }
-                
-                    </script>
-                
+                <div class="content">
+                  <!--  Bootstrap table-->
+                  <div class="table-responsive">
+                      <table class="table table-bordered" id="force_table">
+                        <form action="" method="">
+                         
+                            <tr>
+                              <th hidden></th>
+                              <th hidden></th>
+                              <th hidden></th>
+                                <th style="width: 35%;">Job Position</th>
+                                <th>Local</th>
+                                <th>Non-Local</th>
+                                <th>SAWP</th>
+                              </tr>
+                          
+                         
+                        <tr>
+                          <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                          <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                          <td hidden><input type="text" class="form-control shadow-none" name="category" value="Existing Supervisor"></td>
+                          <td><input type="text" class="form-control shadow-none" name="position"></td>
+                              <td><input type="number" class="form-control shadow-none" name="local"></td>
+                              <td><input type="number" class="form-control shadow-none" name="nonlocal"></td>
+                              <td><input type="number" class="form-control shadow-none" name="sawp"></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4">
+                                <div class="text-right">
+                              <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                            </div>
+                              </td>
+                            </tr>
+                  </form>
+                      </table>
+                    </div>
+      </div>
+      </li>
                     
                       <li>
                         <input type="radio" name="tab" id="third">
                       <label for="third"> Existing Skilled </label>
-                        <div class="content">
-                            <!--  Bootstrap table-->
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="force_table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col" hidden>#</th>
-                                          <th style="width: 35%;">Job Position</th>
-                                          <th scope="col">Local</th>
-                                          <th scope="col">Non-Local</th>
-                                          <th scope="col">SAWP</th>
-                                          <th scope="col">Total</th>
-                                          <th scope="col">% Local</th>
-                                          <th style="width: 6%;"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="skbody">
-                                      <tr>
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="" disabled=""></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr id="skrow" class="d-none">
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="sk_position" id="skposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_local" id="sklocal" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_nonlocal" id="sknonlocal" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_sawp" id="sksawp" onkeyup="Calc3(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_total" id="sktotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="sk_localpct" id="sklocalpct" value="" disabled=""></td>
-                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelSkilled(this)"><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                              <div class="text-right">
-                                <button type="button" class="btn btn-nd btn-warning" onclick="AddSkilled()">Add New Row</button>
-                                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                              </div>
-                              </div>
-                            </li>
-                                <script>
-                
-                                  //Function for adding new row
-                                  function AddSkilled()
-                                  {
-                                      /*Add Button*/
-                                      var v = $("#skrow").clone().appendTo("#skbody") ;
-                                      $(v).find("input").val('');
-                                      $(v).removeClass("d-none");
-                                      $(v).find("th").first().html($('skbody tr').length - 1);
-                                  }
-                                  //End of adding new row function
-                                  
-                                  //Function for deleting existing row
-                                  function DelSkilled(v)
-                                  {
-                                      /*Delete Button*/
-                                         $(v).parent().parent().remove(); 
-                                         GetWorks();
-                                  
-                                          $("#skbody").find("tr").each(
-                                          function(index)
-                                          {
-                                             $(this).find("th").first().html(index);
-                                          }
-                                  
-                                         );
-                                  }
-                                  //End of deleting existing row function
-                                  
-                                     // Calculation for Existing Management Table
-                                     
-                                  function Calc3(v)
-                                  {
-                                   
-                                      var index = $(v).parent().parent().index();
-                                      
-                                      var sk_local = parseFloat(document.getElementsByName("sk_local")[index].value);
-                                      var sk_nonlocal = parseFloat(document.getElementsByName("sk_nonlocal")[index].value);
-                                      var sk_sawp = parseFloat(document.getElementsByName("sk_sawp")[index].value);
-                                  
-                                      var sk_total = sk_local + sk_nonlocal;
-                                      parseFloat(document.getElementsByName("sk_total")[index].value = sk_total);
-                                  
-                                      var sklocalpct = (sk_local / sk_total) * 100;
-                                      var skpct = Math.round(sklocalpct * 10) / 10;
-                    parseFloat(document.getElementsByName("sk_localpct")[index].value = skpct);
-                                  
-                    GetWorks();
-                                  }
-                                  
-                                      </script>
-                
+                      <div class="content">
+                        <!--  Bootstrap table-->
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="force_table">
+                              <form action="" method="">
+                               
+                                  <tr>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                      <th style="width: 35%;">Job Position</th>
+                                      <th>Local</th>
+                                      <th>Non-Local</th>
+                                      <th>SAWP</th>
+                                    </tr>
+                                
+                               
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="category" value="Existing Skilled"></td>
+                                <td><input type="text" class="form-control shadow-none" name="position"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="local"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="nonlocal"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="sawp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4">
+                                      <div class="text-right">
+                                    <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                                  </div>
+                                    </td>
+                                  </tr>
+                        </form>
+                            </table>
+                          </div>
+            </div>
+            </li>
                       
                       <li>
                         <input type="radio" name="tab" id="fourth">
@@ -541,205 +320,82 @@ function menuBtnChange() {
                             <!--  Bootstrap table-->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="force_table">
-                                    <thead>
+                                  <form action="" method="">
+                                   
                                       <tr>
-                                        <th scope="col" hidden>#</th>
+                                        <th hidden></th>
+                                        <th hidden></th>
+                                        <th hidden></th>
                                           <th style="width: 35%;">Job Position</th>
-                                          <th scope="col">Local</th>
-                                          <th scope="col">Non-Local</th>
-                                          <th scope="col">SAWP</th>
-                                          <th scope="col">Total</th>
-                                          <th scope="col">% Local</th>
-                                          <th style="width: 6%;"></th>
+                                          <th>Local</th>
+                                          <th>Non-Local</th>
+                                          <th>SAWP</th>
                                         </tr>
-                                    </thead>
-                                    <tbody id="nskbody">
+                                    
+                                   
+                                  <tr>
+                                    <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                                    <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                                    <td hidden><input type="text" class="form-control shadow-none" name="category" value="Existing Non-Skilled"></td>
+                                    <td><input type="text" class="form-control shadow-none" name="position"></td>
+                                        <td><input type="number" class="form-control shadow-none" name="local"></td>
+                                        <td><input type="number" class="form-control shadow-none" name="nonlocal"></td>
+                                        <td><input type="number" class="form-control shadow-none" name="sawp"></td>
+                                      </tr>
                                       <tr>
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="" disabled=""></td>
-                                        <td></td>
+                                        <td colspan="4">
+                                          <div class="text-right">
+                                        <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                                      </div>
+                                        </td>
                                       </tr>
-                                      <tr id="nskrow" class="d-none">
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="nsk_position" id="nskposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_local" id="nsklocal" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_nonlocal" id="nsknonlocal" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_sawp" id="nsksawp" onkeyup="Calc4(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_total" id="nsktotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="nsk_localpct" id="nsklocalpct" value="" disabled=""></td>
-                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelNonSkilled(this)"><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                    </tbody>
+                            </form>
                                 </table>
                               </div>
-                              <div class="text-right">
-                                <button type="button" class="btn btn-nd btn-warning" onclick="AddNonSkilled()">Add New Row</button>
-                                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                              </div>
-                              </div>
-                            </li>
-                                <script>
-                
-                                  //Function for adding new row
-                                  function AddNonSkilled()
-                                  {
-                                      /*Add Button*/
-                                      var v = $("#nskrow").clone().appendTo("#nskbody") ;
-                                      $(v).find("input").val('');
-                                      $(v).removeClass("d-none");
-                                      $(v).find("th").first().html($('nskbody tr').length - 1);
-                                  }
-                                  //End of adding new row function
-                                  
-                                  //Function for deleting existing row
-                                  function DelNonSkilled(v)
-                                  {
-                                      /*Delete Button*/
-                                         $(v).parent().parent().remove(); 
-                                         GetWorks();
-                                  
-                                          $("#nskbody").find("tr").each(
-                                          function(index)
-                                          {
-                                             $(this).find("th").first().html(index);
-                                          }
-                                  
-                                         );
-                                  }
-                                  //End of deleting existing row function
-                                  
-                                     // Calculation for Existing Management Table
-                                     
-                                  function Calc4(v)
-                                  {
-                                   
-                                      var index = $(v).parent().parent().index();
-                                      
-                                      var nsk_local = parseFloat(document.getElementsByName("nsk_local")[index].value);
-                                      var nsk_nonlocal = parseFloat(document.getElementsByName("nsk_nonlocal")[index].value);
-                                      var nsk_sawp = parseFloat(document.getElementsByName("nsk_sawp")[index].value);
-                                  
-                                      var nsk_total = nsk_local + nsk_nonlocal;
-                                      parseFloat(document.getElementsByName("nsk_total")[index].value = nsk_total);
-                                  
-                                      var nsklocalpct = (nsk_local / nsk_total) * 100;
-                                      var nskpct = Math.round(nsklocalpct * 10) / 10;
-                    parseFloat(document.getElementsByName("nsk_localpct")[index].value = nskpct);
-                                  
-                    GetWorks();
-                                  }
-                                  
-                                      </script>
-                
+                </div>
+              </li>   
                       
                       <li>
                         <input type="radio" name="tab" id="fifth">
                       <label for="fifth"> Existing Admin & Account </label>
-                        <div class="content">
-                            <!--  Bootstrap table-->
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="force_table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col" hidden>#</th>
-                                          <th style="width: 35%;">Job Position</th>
-                                          <th scope="col">Local</th>
-                                          <th scope="col">Non-Local</th>
-                                          <th scope="col">SAWP</th>
-                                          <th scope="col">Total</th>
-                                          <th scope="col">% Local</th>
-                                          <th style="width: 6%;"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="aabody">
-                                      <tr>
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="" disabled=""></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr id="aarow" class="d-none">
-                                        <th scope="row" hidden>1</th>
-                                          <td><input type="text" class="form-control shadow-none" name="a_position" id="aposition"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_local" id="alocal" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_nonlocal" id="anonlocal" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_sawp" id="asawp" onkeyup="Calc5(this);"></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_total" id="atotal" value="" disabled=""></td>
-                                        <td><input type="number" class="form-control shadow-none" name="a_localpct" id="alocalpct" value="" disabled=""></td>
-                                        <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelAdmAcc(this)"><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                              <div class="text-right">
-                                <button type="button" class="btn btn-nd btn-warning" onclick="AddAdmAcc()">Add New Row</button>
-                                <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                              </div>
-                              </div>
-                            </li>
-                                <script>
-                
-                                  //Function for adding new row
-                                  function AddAdmAcc()
-                                  {
-                                      /*Add Button*/
-                                      var v = $("#aarow").clone().appendTo("#aabody") ;
-                                      $(v).find("input").val('');
-                                      $(v).removeClass("d-none");
-                                      $(v).find("th").first().html($('aabody tr').length - 1);
-                                  }
-                                  //End of adding new row function
-                                  
-                                  //Function for deleting existing row
-                                  function DelAdmAcc(v)
-                                  {
-                                      /*Delete Button*/
-                                         $(v).parent().parent().remove(); 
-                                         GetWorks();
-                                  
-                                          $("#aabody").find("tr").each(
-                                          function(index)
-                                          {
-                                             $(this).find("th").first().html(index);
-                                          }
-                                  
-                                         );
-                                  }
-                                  //End of deleting existing row function
-                                  
-                                     // Calculation for Existing Management Table
-                                     
-                                  function Calc5(v)
-                                  {
-                                   
-                                      var index = $(v).parent().parent().index();
-                                      
-                                      var a_local = parseFloat(document.getElementsByName("a_local")[index].value);
-                                      var a_nonlocal = parseFloat(document.getElementsByName("a_nonlocal")[index].value);
-                                      var a_sawp = parseFloat(document.getElementsByName("a_sawp")[index].value);
-                                  
-                                      var a_total = a_local + a_nonlocal;
-                                      parseFloat(document.getElementsByName("a_total")[index].value = a_total);
-                                  
-                                      var alocalpct = (a_local / a_total) * 100;
-                                      var apct = Math.round(alocalpct * 10) / 10;
-                    parseFloat(document.getElementsByName("a_localpct")[index].value = apct);
-                                  
-                    GetWorks();
-                                  }
-                                  
-                                      </script>
-                
-                     
+                      <div class="content">
+                        <!--  Bootstrap table-->
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="force_table">
+                              <form action="" method="">
+                               
+                                  <tr>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                    <th hidden></th>
+                                      <th style="width: 35%;">Job Position</th>
+                                      <th>Local</th>
+                                      <th>Non-Local</th>
+                                      <th>SAWP</th>
+                                    </tr>
+                                
+                               
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                                <td hidden><input type="text" class="form-control shadow-none" name="category" value="Existing Admin & Account"></td>
+                                <td><input type="text" class="form-control shadow-none" name="position"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="local"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="nonlocal"></td>
+                                    <td><input type="number" class="form-control shadow-none" name="sawp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4">
+                                      <div class="text-right">
+                                    <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                                  </div>
+                                    </td>
+                                  </tr>
+                        </form>
+                            </table>
+                          </div>
+            </div>
+            </li>
                   <!--card-mb-4-->
                   </ul>
                    </div>
@@ -752,237 +408,203 @@ function menuBtnChange() {
           <li>
             <input type="radio" name="tab" id="sixth">
           <label for="sixth"> Local Recruitment </label>
-            <div class="content">
-              <p>Breakdown of Local New Recruitment</p>
-    <table class="table table-bordered table-responsive">
-        <thead>
-          <tr>
-            <th class="w-75"></th>
-            <th>Total New Recruitment To Date</th>
-            <th>Total New Recruitment This Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-              <td>Experienced Hire</td>
-            <td><input type="number" class="form-control shadow-none" name="hire_todate" id="hiretodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="hire_thisyr" id="hirethisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>Staff Rollover</td>
-            <td><input type="number" class="form-control shadow-none" name="roll_todate" id="rolltodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="roll_thisyr" id="rollthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>Graduates</td>
-            <td><input type="number" class="form-control shadow-none" name="grad_todate" id="gradtodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="grad_thisyr" id="gradthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>Higher National Diploma (HND)</td>
-            <td><input type="number" class="form-control shadow-none" name="hnd_todate" id="hndtodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="hnd_thisyr" id="hndthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>Brunei Maritime Academy (BMA)</td>
-            <td><input type="number" class="form-control shadow-none" name="bma_todate" id="bmatodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="bma_thisyr" id="bmathisyr" onkeyup="Calc7(this);"></td>
-            
-          </tr>
-          <tr>
-              <td>Advance Diploma/Diploma/Certificate</td>
-            <td><input type="number" class="form-control shadow-none" name="dc_todate" id="dctodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="dc_thisyr" id="dcthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>IBTE (NTEC/HNTEC)</td>
-            <td><input type="number" class="form-control shadow-none" name="ibte_todate" id="ibtetodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="ibte_thisyr" id="ibtethisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>School Leavers (GCE 'A' Level and Below)</td>
-            <td><input type="number" class="form-control shadow-none" name="sch_todate" id="schtodate" onkeyup="Calc6(this);"></td>
-            <td><input type="number" class="form-control shadow-none" name="sch_thisyr" id="schthisyr" onkeyup="Calc7(this);"></td>
-          </tr>
-          <tr>
-              <td>Total</td>
-            <td><input type="number" class="form-control shadow-none" name="total_todate" id="totaltodate" value="" disabled=""></td>
-            <td><input type="number" class="form-control shadow-none" name="total_thisyr" id="totalthisyr" value="" disabled></td>
-          </tr>
-        </tbody>
-      </table>
-       <!-- Add rows button-->
-       <div class="text-right">
-        <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-      </div>
-       
-      <script>
-
-        function Calc6(v)
-                          {
-                           
-                              var index = $(v).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().index();
-                              
-                     var hire_todate = parseFloat(document.getElementsByName("hire_todate")[index].value);
-                     var roll_todate = parseFloat(document.getElementsByName("roll_todate")[index].value);
-                     var grad_todate = parseFloat(document.getElementsByName("grad_todate")[index].value);
-                     var hnd_todate = parseFloat(document.getElementsByName("hnd_todate")[index].value);
-                   var bma_todate = parseFloat(document.getElementsByName("bma_todate")[index].value);
-                   var dc_todate = parseFloat(document.getElementsByName("dc_todate")[index].value);
-                   var ibte_todate = parseFloat(document.getElementsByName("ibte_todate")[index].value);
-                   var sch_todate = parseFloat(document.getElementsByName("sch_todate")[index].value);
-                            
-                   var totalhirelocaltodate = hire_todate + roll_todate + grad_todate + hnd_todate + bma_todate + dc_todate + ibte_todate + sch_todate;
-                    parseFloat(document.getElementsByName("total_todate")[index].value = totalhirelocaltodate);
-
-                    
-
-                          }
-
-                          function Calc7(v)
-                          {
-
-                    var index = $(v).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().index();
-                              
-                              var hire_thisyr = parseFloat(document.getElementsByName("hire_thisyr")[index].value);
-                              var roll_thisyr = parseFloat(document.getElementsByName("roll_thisyr")[index].value);
-                              var grad_thisyr = parseFloat(document.getElementsByName("grad_thisyr")[index].value);
-                              var hnd_thisyr = parseFloat(document.getElementsByName("hnd_thisyr")[index].value);
-                            var bma_thisyr = parseFloat(document.getElementsByName("bma_thisyr")[index].value);
-                            var dc_thisyr = parseFloat(document.getElementsByName("dc_thisyr")[index].value);
-                            var ibte_thisyr = parseFloat(document.getElementsByName("ibte_thisyr")[index].value);
-                            var sch_thisyr = parseFloat(document.getElementsByName("sch_thisyr")[index].value);
-                                     
-                            var totalhirelocalthisyr = hire_thisyr + roll_thisyr + grad_thisyr + hnd_thisyr + bma_thisyr + dc_thisyr + ibte_thisyr + sch_thisyr;
-                             parseFloat(document.getElementsByName("total_thisyr")[index].value = totalhirelocalthisyr);
-                            
-                          
-                             GetHires();
-                          
-                          }
-        
-        </script>
-
+          <div class="content">
+            <p>Total New Recruitment To Date</p>
+            <!--  Bootstrap table-->
+            <div class="table-responsive">
+              <table class="table table-bordered" id="hire_table">
+                <form action="" method="">
+                 
+                <tr>
+                <th hidden></th>
+                <th hidden></th>
+                <th hidden></th>
+                <th hidden></th>
+                <th>Experienced Hire</th>
+                <th>Staff Rollover</th>
+                <th>Graduates</th>
+                <th>Higher National Diploma(HND)</th>
+                <th>Brunei Maritime Academy(BMA)</th>
+                <th>Advance Diploma/Diploma/Certificate</th>
+                <th>IBTE(NTEC/HNTEC)</th>
+                <th>School Leavers(GCE 'A' Level and Below)</th>
+                </tr>
+                  
+                 
+                <tr>
+                  <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                <td hidden><input type="text" class="form-control shadow-none" name="category" value="Local Recruitment"></td>
+                <td hidden><input type="text" class="form-control shadow-none" name="code" value="Total New Recruitment To Date"></td>
+                <td><input type="text" class="form-control shadow-none" name="exphire"></td>
+                <td><input type="number" class="form-control shadow-none" name="rollover"></td>
+                <td><input type="number" class="form-control shadow-none" name="grads"></td>
+                <td><input type="number" class="form-control shadow-none" name="hnd"></td>
+                <td><input type="text" class="form-control shadow-none" name="bma"></td>
+                <td><input type="number" class="form-control shadow-none" name="adc"></td>
+                <td><input type="number" class="form-control shadow-none" name="ibte"></td>
+                <td><input type="number" class="form-control shadow-none" name="schleavers"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="8">
+                        <div class="text-right">
+                      <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                    </div>
+                      </td>
+                    </tr>
+          </form>
+              </table>
               </div>
+<br>
+              <p>Total New Recruitment This Year</p>
+              <!--  Bootstrap table-->
+              <div class="table-responsive">
+                  <table class="table table-bordered" id="hire_table">
+                  <form action="" method="">
+                     
+                    <tr>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th>Experienced Hire</th>
+                      <th>Staff Rollover</th>
+                      <th>Graduates</th>
+                      <th>Higher National Diploma(HND)</th>
+                      <th>Brunei Maritime Academy(BMA)</th>
+                      <th>Advance Diploma/Diploma/Certificate</th>
+                      <th>IBTE(NTEC/HNTEC)</th>
+                      <th>School Leavers(GCE 'A' Level and Below)</th>
+                      </tr>
+                        
+                       
+                      <tr>
+                        <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                      <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                      <td hidden><input type="text" class="form-control shadow-none" name="category" value="Local Recruitment"></td>
+                      <td hidden><input type="text" class="form-control shadow-none" name="code" value="Total New Recruitment This Year"></td>
+                    <td><input type="text" class="form-control shadow-none" name="exphire"></td>
+                    <td><input type="number" class="form-control shadow-none" name="rollover"></td>
+                    <td><input type="number" class="form-control shadow-none" name="grads"></td>
+                    <td><input type="number" class="form-control shadow-none" name="hnd"></td>
+                    <td><input type="text" class="form-control shadow-none" name="bma"></td>
+                    <td><input type="number" class="form-control shadow-none" name="adc"></td>
+                    <td><input type="number" class="form-control shadow-none" name="ibte"></td>
+                    <td><input type="number" class="form-control shadow-none" name="schleavers"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="8">
+                            <div class="text-right">
+                          <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                        </div>
+                          </td>
+                        </tr>
+                    </form> 
+                  </table>
+                </div>
+
+</div>
           </li>
 
               <li>
                 <input type="radio" name="tab" id="seventh">
               <label for="seventh"> Non-Local Recruitment </label>
-                <div class="content">
-                  <p>Breakdown of Non-Local New Recruitment</p>
-                  <table class="table table-bordered table-responsive">
-                    <thead>
-                      <tr>
-                        <th class="w-75"></th>
-                        <th>Total New Recruitment To Date</th>
-                        <th>Total New Recruitment This Year</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                          <td>Experienced Hire</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonhire_todate" id="nonhiretodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonhire_thisyr" id="nonhirethisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>Staff Rollover</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonroll_todate" id="nonrolltodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonroll_thisyr" id="nonrollthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>Graduates</td>
-                        <td><input type="number" class="form-control shadow-none" name="nongrad_todate" id="gradtodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nongrad_thisyr" id="gradthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>Higher National Diploma (HND)</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonhnd_todate" id="hndtodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonhnd_thisyr" id="hndthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>Brunei Maritime Academy (BMA)</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonbma_todate" id="bmatodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonbma_thisyr" id="bmathisyr" onkeyup="Calc9(this);"></td>
-                        
-                      </tr>
-                      <tr>
-                          <td>Advance Diploma/Diploma/Certificate</td>
-                        <td><input type="number" class="form-control shadow-none" name="nondc_todate" id="dctodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nondc_thisyr" id="dcthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>IBTE (NTEC/HNTEC)</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonibte_todate" id="ibtetodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonibte_thisyr" id="ibtethisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>School Leavers (GCE 'A' Level and Below)</td>
-                        <td><input type="number" class="form-control shadow-none" name="nonsch_todate" id="schtodate" onkeyup="Calc8(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonsch_thisyr" id="schthisyr" onkeyup="Calc9(this);"></td>
-                      </tr>
-                      <tr>
-                          <td>Total</td>
-                        <td><input type="number" class="form-control shadow-none" name="nontotal_todate" id="totaltodate" value="" disabled=""></td>
-                        <td><input type="number" class="form-control shadow-none" name="nontotal_thisyr" id="totalthisyr" value="" disabled></td>
-                      </tr>
-                    </tbody>
+              <div class="content">
+                <p>Total New Recruitment To Date</p>
+                <!--  Bootstrap table-->
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="hire_table">
+                    <form action="" method="">
+                     
+                    <tr>
+                    <th hidden></th>
+                    <th hidden></th>
+                    <th hidden></th>
+                    <th hidden></th>
+                    <th>Experienced Hire</th>
+                    <th>Staff Rollover</th>
+                    <th>Graduates</th>
+                    <th>Higher National Diploma(HND)</th>
+                    <th>Brunei Maritime Academy(BMA)</th>
+                    <th>Advance Diploma/Diploma/Certificate</th>
+                    <th>IBTE(NTEC/HNTEC)</th>
+                    <th>School Leavers(GCE 'A' Level and Below)</th>
+                    </tr>
+                      
+                     
+                    <tr>
+                      <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="category" value="Non-Local Recruitment"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="code" value="Total New Recruitment To Date"></td>
+                    <td><input type="text" class="form-control shadow-none" name="exphire"></td>
+                    <td><input type="number" class="form-control shadow-none" name="rollover"></td>
+                    <td><input type="number" class="form-control shadow-none" name="grads"></td>
+                    <td><input type="number" class="form-control shadow-none" name="hnd"></td>
+                    <td><input type="text" class="form-control shadow-none" name="bma"></td>
+                    <td><input type="number" class="form-control shadow-none" name="adc"></td>
+                    <td><input type="number" class="form-control shadow-none" name="ibte"></td>
+                    <td><input type="number" class="form-control shadow-none" name="schleavers"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="8">
+                            <div class="text-right">
+                          <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                        </div>
+                          </td>
+                        </tr>
+              </form>
                   </table>
-       <!-- Add rows button-->
-       <div class="text-right">
-        <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-      </div>
-
-      <script>
-
-        function Calc8(v)
-                          {
-                           
-                            var index = $(v).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().index();
-                              
-                     var nonhire_todate = parseFloat(document.getElementsByName("nonhire_todate")[index].value);
-                     var nonroll_todate = parseFloat(document.getElementsByName("nonroll_todate")[index].value);
-                     var nongrad_todate = parseFloat(document.getElementsByName("nongrad_todate")[index].value);
-                     var nonhnd_todate = parseFloat(document.getElementsByName("nonhnd_todate")[index].value);
-                   var nonbma_todate = parseFloat(document.getElementsByName("nonbma_todate")[index].value);
-                   var nondc_todate = parseFloat(document.getElementsByName("nondc_todate")[index].value);
-                   var nonibte_todate = parseFloat(document.getElementsByName("nonibte_todate")[index].value);
-                   var nonsch_todate = parseFloat(document.getElementsByName("nonsch_todate")[index].value);
+                  </div>
+    <br>
+                  <p>Total New Recruitment This Year</p>
+                  <!--  Bootstrap table-->
+                  <div class="table-responsive">
+                      <table class="table table-bordered" id="hire_table">
+                      <form action="" method="">
+                         
+                        <tr>
+                          <th hidden></th>
+                          <th hidden></th>
+                          <th hidden></th>
+                          <th hidden></th>
+                          <th>Experienced Hire</th>
+                          <th>Staff Rollover</th>
+                          <th>Graduates</th>
+                          <th>Higher National Diploma(HND)</th>
+                          <th>Brunei Maritime Academy(BMA)</th>
+                          <th>Advance Diploma/Diploma/Certificate</th>
+                          <th>IBTE(NTEC/HNTEC)</th>
+                          <th>School Leavers(GCE 'A' Level and Below)</th>
+                          </tr>
                             
-                   var totalhirenonlocaltodate = nonhire_todate + nonroll_todate + nongrad_todate + nonhnd_todate+ nonbma_todate + nondc_todate + nonibte_todate + nonsch_todate;
-                    parseFloat(document.getElementsByName("nontotal_todate")[index].value = totalhirenonlocaltodate);
-                    console.log(totalhirenonlocaltodate);
-
-                    
-
-                          }
-
-                          function Calc9(v)
-                          {
-
-                            var index = $(v).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().index();
-                              
-                              var nonhire_thisyr = parseFloat(document.getElementsByName("nonhire_thisyr")[index].value);
-                              var nonroll_thisyr = parseFloat(document.getElementsByName("nonroll_thisyr")[index].value);
-                              var nongrad_thisyr = parseFloat(document.getElementsByName("nongrad_thisyr")[index].value);
-                              var nonhnd_thisyr = parseFloat(document.getElementsByName("nonhnd_thisyr")[index].value);
-                            var nonbma_thisyr = parseFloat(document.getElementsByName("nonbma_thisyr")[index].value);
-                            var nondc_thisyr = parseFloat(document.getElementsByName("nondc_thisyr")[index].value);
-                            var nonibte_thisyr = parseFloat(document.getElementsByName("nonibte_thisyr")[index].value);
-                            var nonsch_thisyr = parseFloat(document.getElementsByName("nonsch_thisyr")[index].value);
-                                     
-                            var totalhirenonlocalthisyr = nonhire_thisyr + nonroll_thisyr + nongrad_thisyr + nonhnd_thisyr + nonbma_thisyr + nondc_thisyr + nonibte_thisyr + nonsch_thisyr;
-                             parseFloat(document.getElementsByName("nontotal_thisyr")[index].value = totalhirenonlocalthisyr);
-                             console.log(totalhirenonlocalthisyr);
-
-                             GetHires();
-                          
-                          
-                          }
-        
-        </script>
-       
-            </div>
+                           
+                          <tr>
+                            <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                          <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                          <td hidden><input type="text" class="form-control shadow-none" name="category" value="Non-Local Recruitment"></td>
+                          <td hidden><input type="text" class="form-control shadow-none" name="code" value="Total New Recruitment This Year"></td>
+                        <td><input type="text" class="form-control shadow-none" name="exphire"></td>
+                        <td><input type="number" class="form-control shadow-none" name="rollover"></td>
+                        <td><input type="number" class="form-control shadow-none" name="grads"></td>
+                        <td><input type="number" class="form-control shadow-none" name="hnd"></td>
+                        <td><input type="text" class="form-control shadow-none" name="bma"></td>
+                        <td><input type="number" class="form-control shadow-none" name="adc"></td>
+                        <td><input type="number" class="form-control shadow-none" name="ibte"></td>
+                        <td><input type="number" class="form-control shadow-none" name="schleavers"></td>
+                            </tr>
+                            <tr>
+                              <td colspan="8">
+                                <div class="text-right">
+                              <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                            </div>
+                              </td>
+                            </tr>
+                        </form> 
+                      </table>
+                    </div>
+    
+    </div>
           </li>
 
           <li>
@@ -993,135 +615,84 @@ function menuBtnChange() {
                     <!--  Bootstrap table-->
                     <div class="table-responsive">
                     <table class="table table-bordered" id="leavers_table">
-                      <thead>
+                      <form action="" method="">
                         <tr>
+                          <th hidden></th>
+                          <th hidden></th>
+                          <th hidden></th>
                           <th scope="col">Resign</th>
                           <th scope="col">Terminate</th>
                           <th scope="col">Transfer</th>
                           <th scope="col">Others</th>
-                          <th scope="col">Total</th>
                         </tr>
-                      </thead>
-                      <tbody>
+                
                         <tr>
-                            <td><input type="number" class="form-control shadow-none" name="localresign" id="resign" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localterminate" id="terminate" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localtransfer" id="transfer" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localothers" id="others" onkeyup="Calc10(this);"></td>
-                          <td><input type="number" class="form-control shadow-none" name="localleavers" id="totallocalleave" value="" disabled></td>
-                        </tr>
-                      </tbody>
-                      </table>
-                    </div>
-                    <!-- Add rows button-->
-                    <div class="text-right">
-                    <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
+                          <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                  <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                  <td hidden><input type="text" class="form-control shadow-none" name="category" value="Local Leavers"></td>
+                  <td><input type="number" class="form-control shadow-none" name="resign" id="resign"></td>
+                  <td><input type="number" class="form-control shadow-none" name="terminate" id="terminate"></td>
+                  <td><input type="number" class="form-control shadow-none" name="transfer" id="transfer"></td>
+                  <td><input type="number" class="form-control shadow-none" name="others" id="others"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <div class="text-right">
+                    <button type="submit" class="btn btn-md btn-warning">Submit</button>
                   </div>
+                    </td>
+                  </tr>
+              </form> 
+            </table>
+          </div>
+        </div>
+              </li>
 
-                  <script>
-
-                  function Calc10(v)
-                  {
-
-            var index = $(v).parent().parent().index();
-                      
-                      var localresign= parseFloat(document.getElementsByName("localresign")[index].value);
-                      var localterminate= parseFloat(document.getElementsByName("localterminate")[index].value);
-                      var localtransfer= parseFloat(document.getElementsByName("localtransfer")[index].value);
-                      var localothers= parseFloat(document.getElementsByName("localothers")[index].value);
-                             
-                    var local_leavers = localresign + localterminate + localtransfer + localothers;
-                     parseFloat(document.getElementsByName("localleavers")[index].value = local_leavers);
-                  
-                  
-                  }
-
-                </script>
-
-                </div>
-          </li>
           <li>
           <input type="radio" name="tab" id="ninth">
           <label for="ninth"> Non-Local Leavers</label>
-            <div class="content">
-                <p class="mb-0">Breakdown of Non-Local Leavers This Year</p>
-                  <!--  Bootstrap table-->
-                  <div class="table-responsive">
-                  <table class="table table-bordered" id="leavers_table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Resign</th>
-                        <th scope="col">Terminate</th>
-                        <th scope="col">Transfer</th>
-                        <th scope="col">Others</th>
-                        <th scope="col">Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalresign" id="resign" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalterminate" id="terminate" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocaltransfer" id="transfer" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalothers" id="others" onkeyup="Calc11(this);"></td>
-                        <td><input type="number" class="form-control shadow-none" name="nonlocalleavers" id="totalnonlocalleave" value="" disabled></td>
-                      </tr>
-                    </tbody>
-                    </table>
-                  </div>
-                  <!-- Add rows button-->
-                  <div class="text-right">
-                  <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                </div>
-
-                <script>
-
-                  function Calc11(v)
-                  {
-
-            var index = $(v).parent().parent().index();
-                      
-                      var nonlocalresign= parseFloat(document.getElementsByName("nonlocalresign")[index].value);
-                      var nonlocalterminate= parseFloat(document.getElementsByName("nonlocalterminate")[index].value);
-                      var nonlocaltransfer= parseFloat(document.getElementsByName("nonlocaltransfer")[index].value);
-                      var nonlocalothers= parseFloat(document.getElementsByName("nonlocalothers")[index].value);
-                             
-                    var nonlocal_leavers = nonlocalresign + nonlocalterminate + nonlocaltransfer + nonlocalothers;
-                     parseFloat(document.getElementsByName("nonlocalleavers")[index].value = nonlocal_leavers);
-                  
-                  
-                  }
-
-                </script>
-
-              </div>
-        </li>
+          <div class="content">
+            <p class="mb-0">Breakdown of Non-Local Leavers This Year</p>
+              <!--  Bootstrap table-->
+              <div class="table-responsive">
+              <table class="table table-bordered" id="leavers_table">
+                <form action="" method="">
+                  <tr>
+                    <th hidden></th>
+                    <th hidden></th>
+                    <th hidden></th>
+                    <th scope="col">Resign</th>
+                    <th scope="col">Terminate</th>
+                    <th scope="col">Transfer</th>
+                    <th scope="col">Others</th>
+                  </tr>
+          
+                  <tr>
+                    <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+            <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+            <td hidden><input type="text" class="form-control shadow-none" name="category" value="Non-Local Leavers"></td>
+            <td><input type="number" class="form-control shadow-none" name="resign" id="resign"></td>
+            <td><input type="number" class="form-control shadow-none" name="terminate" id="terminate"></td>
+            <td><input type="number" class="form-control shadow-none" name="transfer" id="transfer"></td>
+            <td><input type="number" class="form-control shadow-none" name="others" id="others"></td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <div class="text-right">
+              <button type="submit" class="btn btn-md btn-warning">Submit</button>
+            </div>
+              </td>
+            </tr>
+        </form> 
+      </table>
+    </div>
+  </div>
+          </li>
       </ul>
 
                    </div>
                    <div class="tab-pane fade" id="tab3">
-                    <div class="table-responsive">
-                      <table class="table table-bordered" id="spend_table">
-                        <thead>
-                        <tr>
-                          <th class="text-center" style="background-color: #58595B; color: #fff;" colspan="4">Total Spend</th>
-                        </tr>
-                        <tr>
-                            <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend in Brunei (BND $)</th>
-                            <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend out Brunei (BND $)</th>
-                            <th class="text-center" style="background-color: #808285; height: 10px;">Total Spend (BND $)</th>
-                            <th class="text-center" style="background-color: #808285; height: 10px;">% Spend in Brunei</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="total_in" id="totalin" disabled></td>
-                          <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="total_out" id="totalout" disabled></td>
-                          <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="total_spend" id="totalspend" disabled></td>
-                          <td class="text-center" style="background-color: #A7A9AC;"><input type="number" class="form-control shadow-none text-center" style="background-color: #A7A9AC; font-weight:bold; border: none; height: 15px;" name="totalpct_spend" id="totalpctspend" disabled></td>
-                        </tr>
-                      </tbody>
-                      </table>
-                    </div>
+                 
             <br>
           
                     <h4>Section 3 - Content Break Down</h4>
@@ -1130,300 +701,223 @@ function menuBtnChange() {
                       <li>
                         <input type="radio" name="tab" id="tenth">
                       <label for="tenth"> Employment </label>
-                        <div class="content">
-                        <!--  Bootstrap table-->
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="content_table">
-                                <thead>
-                                  <tr>
-                                      <th scope="col">EMPLOYMENT</th>
-                                      <th scope="col">Spend in Brunei (BND $)</th>
-                                      <th scope="col">Spend out Brunei(BND $)</th>
-                                      <th scope="col">Total Spend (BND $)</th>
-                                      <th scope="col">% Spend in Brunei</th>
-                                      <th scope="col" hidden>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Local Employment</th>
-                                      <td><input type="number" class="form-control shadow-none" name="local_spendin" id="localspendin" onkeyup="Calc12(this);"></td>
-                                    <td><input type="number" class="form-control shadow-none" name="local_spendout" id="localspendout" onkeyup="Calc12(this);"></td>
-                                    <td><input type="number" class="form-control shadow-none" name="total_localemp" id="totallocalemp" disabled ></td>
-                                    <td><input type="number" class="form-control shadow-none" name="pct_localemp" id="pctlocalemp" disabled></td>
-                                    <td hidden><input type="date" class="form-control shadow-none" name="date_localemp" id="datelocalemp"></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">Non Local Employment</th>
-                                      <td><input type="number" class="form-control shadow-none" name="nonlocal_spendin" id="nonlocalspendin" onkeyup="Calc13(this);"></td>
-                                    <td><input type="number" class="form-control shadow-none" name="nonlocal_spendout" id="nonlocalspendout"  onkeyup="Calc13(this);"></td>
-                                    <td><input type="number" class="form-control shadow-none" name="total_nonlocalemp" id="totalnonlocalemp" disabled></td>
-                                    <td><input type="number" class="form-control shadow-none" name="pct_nonlocalemp" id="pctnonlocalemp" disabled></td>
-                                    <td hidden><input type="date" class="form-control shadow-none" name="date_nonlocalemp" id="datenonlocalemp"></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">EMPLOYMENT TOTAL</th>
-                                      <td><input type="number" class="form-control shadow-none" name="total_emp_spendin" id="totalempspendin" disabled></td>
-                                    <td><input type="number" class="form-control shadow-none" name="total_emp_spendout" id="totalempspendout" disabled></td>
-                                    <td><input type="number" class="form-control shadow-none" name="total_emp_spend" id="totalempspend" disabled></td>
-                                    <td><input type="number" class="form-control shadow-none" name="pct_spendin" id="pctspendin" disabled></td>
-                                    <td hidden><input type="date" class="form-control shadow-none" name="date_total_emp" id="datetotalemp"></td>
-                                  </tr>
-                                </tbody>
-                            </table>
-                          </div>
-                        <!-- Submit button-->
-                        <div class="text-right">
-                        <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                      </div>
-          
-                      <script>
-                      function Calc12(v)
-                      {
-          
-                var index = $(v).parent().parent().index();
-                          
-                          var local_spendin= parseFloat(document.getElementsByName("local_spendin")[index].value);
-                          var local_spendout= parseFloat(document.getElementsByName("local_spendout")[index].value);
-                                 
-                        var totallocalspend = local_spendin + local_spendout;
-                        var test = totallocalspend.toFixed(2);
-                         parseFloat(document.getElementsByName("total_localemp")[index].value = test);
-          
-                         var spendin_localpct = ( local_spendin / totallocalspend) * 100;
-                    var localspendpct = Math.round(spendin_localpct * 10) / 10;
-                    parseFloat(document.getElementsByName("pct_localemp")[index].value = localspendpct);
+                      <div class="content">
+                        <p class="mb-0">Local Employment</p>
+                          <!--  Bootstrap table-->
+                          <div class="table-responsive">
+                          <table class="table table-bordered" id="content_table">
+                            <form action="" method="">
+                              <tr>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th scope="col">Spend in Brunei (BND $)</th>
+                                <th scope="col">Spend out Brunei (BND $)</th>
+                              </tr>
                       
-                    GetSpends();
-                      
-                      }
-          
-                      function Calc13(v)
-                      {
-          
-                var index = $(v).parent().parent().parent().parent().index();
-                          
-                          var nonlocal_spendin= parseFloat(document.getElementsByName("nonlocal_spendin")[index].value);
-                          var nonlocal_spendout= parseFloat(document.getElementsByName("nonlocal_spendout")[index].value);
-                                 
-                        var totalnonlocalspend = nonlocal_spendin + nonlocal_spendout;
-                        var test2 = totalnonlocalspend.toFixed(2);
-                         parseFloat(document.getElementsByName("total_nonlocalemp")[index].value = test2);
-          
-                         var spendin_nonpct = ( nonlocal_spendin / totalnonlocalspend) * 100;
-                    var nonspendpct = Math.round(spendin_nonpct * 10) / 10;
-                    parseFloat(document.getElementsByName("pct_nonlocalemp")[index].value = nonspendpct);
-                      
-                    GetSpends();
-                      
-                      }
-          
-                    </script>
-          
-                    </div>
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="category" value="Employment"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="code" value="Local Employment"></td>
+                        <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+                        <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <div class="text-right">
+                          <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                        </div>
+                          </td>
+                        </tr>
+                    </form> 
+                  </table>
+                </div>
+                <br>
+                <p class="mb-0">Non-Local Employment</p>
+                <!--  Bootstrap table-->
+                <div class="table-responsive">
+                <table class="table table-bordered" id="content_table">
+                  <form action="" method="">
+                    <tr>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th scope="col">Spend in Brunei (BND $)</th>
+                      <th scope="col">Spend out Brunei (BND $)</th>
+                    </tr>
+            
+                    <tr>
+                      <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="category" value="Employment"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="code" value="Non-Local Employment"></td>
+              <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+              <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="text-right">
+                <button type="submit" class="btn btn-md btn-warning">Submit</button>
+              </div>
+                </td>
+              </tr>
+          </form> 
+        </table>
+      </div>
+              </div>
                     </li>
           
                     <li>
                       <input type="radio" name="tab" id="eleventh">
                       <label for="eleventh"> Training </label>
-                        <div class="content">
+                      <div class="content">
                           <!--  Bootstrap table-->
                           <div class="table-responsive">
                           <table class="table table-bordered" id="content_table">
-                            <tr>
-                              <th rowspan="2" class="align-middle">TRAINING</th>
-                              <td style="font-weight: bold;">Spend in Brunei (BND $)</td>
-                              <td style="font-weight: bold;">Spend out Brunei(BND $)</td>
-                              <td style="font-weight: bold;">Total Spend (BND $)</td>
-                              <td style="font-weight: bold;">% Spend in Brunei</td>
-                              <td hidden>Date</td>
-                            </tr>
-                            <tr>
-                              <td><input type="number" class="form-control shadow-none" name="train_spendin" id="trainspendin" onkeyup="Calc14(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="train_spendout" id="trainspendout" onkeyup="Calc14(this);"></td>
-                              <td><input type="number" class="form-control shadow-none" name="total_training" id="totaltraining" disabled></td>
-                              <td><input type="number" class="form-control shadow-none" name="pct_training" id="pcttraining" disabled></td>
-                              <td hidden><input type="date" class="form-control shadow-none" name="date_emp" id="date_emp"></td>
-                            </tr>
-                          </table>
+                            <form action="" method="">
+                              <tr>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th scope="col">Spend in Brunei (BND $)</th>
+                                <th scope="col">Spend out Brunei (BND $)</th>
+                              </tr>
+                      
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="category" value="Training"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="code" value="None"></td>
+                        <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+                        <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <div class="text-right">
+                          <button type="submit" class="btn btn-md btn-warning">Submit</button>
                         </div>
-                          <!-- Submit button-->
-                          <div class="text-right">
-                          <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                        </div>
-          
-                        <script>
-                          function Calc14(v)
-                          {
-              
-                    var index = $(v).parent().parent().parent().index();
-                              
-                              var train_spendin= parseFloat(document.getElementsByName("train_spendin")[index].value);
-                              var train_spendout= parseFloat(document.getElementsByName("train_spendout")[index].value);
-                                     
-                            var totalspendtrain = train_spendin + train_spendout;
-                            var test3 = totalspendtrain.toFixed(2);
-                             parseFloat(document.getElementsByName("total_training")[index].value = test3);
-              
-                             var trainingpct = ( train_spendin / totalspendtrain) * 100;
-                        var trainpct = Math.round(trainingpct * 10) / 10;
-                        parseFloat(document.getElementsByName("pct_training")[index].value = trainpct);
-                          
-                      GetSpends();
-                          
-                          }
-                          </script>
-          
-                      </div>
+                          </td>
+                        </tr>
+                    </form> 
+                  </table>
+                </div>
+               
+              </div>
                     </li>
           
                     <li>
                       <input type="radio" name="tab" id="twelfth">
                       <label for="twelfth"> Goods </label>
-                        <div class="content">
-                      <!--  Bootstrap table-->
-                      <div class="table-responsive">
-                      <table class="table table-bordered" id="content_table">
-                        <thead>
-                          <tr>
-                              <th scope="col">GOODS</th>
-                              <th scope="col">Spend in Brunei (BND $)</th>
-                              <th scope="col">Spend out Brunei(BND $)</th>
-                              <th scope="col">Total Spend (BND $)</th>
-                              <th scope="col">% Spend in Brunei</th>
-                              <th scope="col" hidden>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Manufactured</th>
-                              <td><input type="number" class="form-control shadow-none" name="manufactured" id="man_bru" onkeyup="Calc15(this);"></td>
-                            <td class="table-active text-center">Not Applicable</td>
-                            <td><input type="number" class="form-control shadow-none" name="total_manufactured" id="totalmanufactured" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="pct_manufactured" id="pctmanufactured" disabled></td>
-                            <td hidden><input type="date" class="form-control shadow-none" name="date_manufactured" id="datemanufactured"></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Purchased</th>
-                              <td><input type="number" class="form-control shadow-none" name="purchase_spendin" id="purchasespendin" onkeyup="Calc16(this);"></td>
-                            <td><input type="number" class="form-control shadow-none" name="purchase_spendout" id="purchasespendout" onkeyup="Calc16(this);"></td>
-                            <td><input type="number" class="form-control shadow-none" name="total_purchase" id="totalpurchase" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="purchase_pct" id="purchasepct" disabled></td>
-                            <td hidden><input type="date" class="form-control shadow-none" name="date_purchase" id="datepurchase"></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">GOODS TOTAL</th>
-                              <td><input type="number" class="form-control shadow-none" name="spendin_goods" id="spendingoods" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="spendout_goods" id="spendoutgoods" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="total_goods" id="totalgoods" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="goods_pct" id="goodspct" disabled></td>
-                            <td hidden><input type="date" class="form-control shadow-none" name="date_goods" id="dategoods"></td>
-                          </tr>
-                        </tbody>
-                    </table>
-                  </div>
-                      <!-- Add rows button-->
-                      <div class="text-right">
-                      <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                    </div>
-          
-                    <script>
-                      function Calc15(v)
-                      {
-          
-                var index = $(v).parent().parent().index();
-                          
-                          var manufactured= parseFloat(document.getElementsByName("manufactured")[index].value);
-                                 
-                        var totalman = manufactured;
-                        var test4 = totalman.toFixed(2);
-                         parseFloat(document.getElementsByName("total_manufactured")[index].value = test4);
-          
-                         var pct_man = ( manufactured / totalman) * 100;
-                    var pctman = Math.round(pct_man * 10) / 10;
-                    parseFloat(document.getElementsByName("pct_manufactured")[index].value = pctman);
+                      <div class="content">
+                        <p class="mb-0">Manufactured Goods</p>
+                          <!--  Bootstrap table-->
+                          <div class="table-responsive">
+                          <table class="table table-bordered" id="content_table">
+                            <form action="" method="">
+                              <tr>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th hidden></th>
+                                <th scope="col">Spend in Brunei (BND $)</th>
+                                <th scope="col">Spend out Brunei (BND $)</th>
+                              </tr>
                       
-                    GetSpends();
-                      
-                      }
-          
-                      function Calc16(v)
-                      {
-          
-                var index = $(v).parent().parent().parent().parent().index();
-                          
-                          var purchase_spendin= parseFloat(document.getElementsByName("purchase_spendin")[index].value);
-                          var purchase_spendout= parseFloat(document.getElementsByName("purchase_spendout")[index].value);
-                                 
-                        var totalofpurchase = purchase_spendin + purchase_spendout;
-                        var test5 = totalofpurchase.toFixed(2);
-                         parseFloat(document.getElementsByName("total_purchase")[index].value = test5);
-          
-                         var pctpurchase = ( purchase_spendin / totalofpurchase) * 100;
-                    var purcpct = Math.round(pctpurchase * 10) / 10;
-                    parseFloat(document.getElementsByName("purchase_pct")[index].value = purcpct);
-                      
-                    GetSpends();
-                      
-                      }
-          
-                    </script>
-          
-                  </div>
+                              <tr>
+                                <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="category" value="Goods"></td>
+                        <td hidden><input type="text" class="form-control shadow-none" name="code" value="Manufactured Goods"></td>
+                        <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+                        <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <div class="text-right">
+                          <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                        </div>
+                          </td>
+                        </tr>
+                    </form> 
+                  </table>
+                </div>
+                <br>
+                <p class="mb-0">Purchased Goods</p>
+                <!--  Bootstrap table-->
+                <div class="table-responsive">
+                <table class="table table-bordered" id="content_table">
+                  <form action="" method="">
+                    <tr>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th hidden></th>
+                      <th scope="col">Spend in Brunei (BND $)</th>
+                      <th scope="col">Spend out Brunei (BND $)</th>
+                    </tr>
+            
+                    <tr>
+                      <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="category" value="Goods"></td>
+              <td hidden><input type="text" class="form-control shadow-none" name="code" value="Purchased Goods"></td>
+              <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+              <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="text-right">
+                <button type="submit" class="btn btn-md btn-warning">Submit</button>
+              </div>
+                </td>
+              </tr>
+          </form> 
+        </table>
+      </div>
+              </div>
                   </li>
           
                   <li>
                     <input type="radio" name="tab" id="thirteenth">
                     <label for="thirteenth"> Services</label>
-                      <div class="content">
-                    <!--  Bootstrap table-->
-                       <div class="table-responsive">
-                        <table class="table table-bordered" id="content_table">
+                    <div class="content">
+                      <!--  Bootstrap table-->
+                      <div class="table-responsive">
+                      <table class="table table-bordered" id="content_table">
+                        <form action="" method="">
                           <tr>
-                            <th rowspan="2" class="align-middle">SERVICES</th>
-                            <td style="font-weight: bold;">Spend in Brunei (BND $)</td>
-                            <td style="font-weight: bold;">Spend out Brunei(BND $)</td>
-                            <td style="font-weight: bold;">Total Spend (BND $)</td>
-                            <td style="font-weight: bold;">% Spend in Brunei</td>
-                            <td hidden>Date</td>
+                            <th hidden></th>
+                            <th hidden></th>
+                            <th hidden></th>
+                            <th hidden></th>
+                            <th scope="col">Spend in Brunei (BND $)</th>
+                            <th scope="col">Spend out Brunei (BND $)</th>
                           </tr>
+                  
                           <tr>
-                            <td><input type="number" class="form-control shadow-none" name="service_spendin" id="servicespendin" onkeyup="Calc17(this);"></td>
-                            <td><input type="number" class="form-control shadow-none" name="service_spendout" id="servicespendout" onkeyup="Calc17(this);"></td>
-                            <td><input type="number" class="form-control shadow-none" name="total_service" id="totalservice" disabled></td>
-                            <td><input type="number" class="form-control shadow-none" name="service_pct" id="servicepct" disabled></td>
-                            <td hidden><input type="date" class="form-control shadow-none" name="service_date" id="servicedate"></td>
-                          </tr>
-                        </table>
-                      </div>
-                    <!-- Add rows button-->
-                    <div class="text-right">
-                    <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                  </div>
-          
-                  <script>
-                    function Calc17(v)
-                    {
-          
-              var index = $(v).parent().parent().parent().index();
-                        
-                        var service_spendin= parseFloat(document.getElementsByName("service_spendin")[index].value);
-                        var service_spendout= parseFloat(document.getElementsByName("service_spendout")[index].value);
-                               
-                      var totalspendservice = service_spendin + service_spendout;
-                      var test6 = totalspendservice.toFixed(2);
-                       parseFloat(document.getElementsByName("total_service")[index].value = test6);
-          
-                       var pctservice = ( service_spendin / totalspendservice) * 100;
-                  var servpct = Math.round(pctservice * 10) / 10;
-                  parseFloat(document.getElementsByName("service_pct")[index].value = servpct);
-                    
-                GetSpends();
-                    
-                    }
-                    </script>
-          
-                </div>
+                            <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="category" value="Services"></td>
+                    <td hidden><input type="text" class="form-control shadow-none" name="code" value="None"></td>
+                    <td><input type="number" class="form-control shadow-none" name="inbrunei"></td>
+                    <td><input type="number" class="form-control shadow-none" name="outbrunei"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <div class="text-right">
+                      <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                    </div>
+                      </td>
+                    </tr>
+                </form> 
+              </table>
+            </div>
+           
+          </div>
                 </li>
             </ul>
           
@@ -1436,97 +930,54 @@ function menuBtnChange() {
             <input type="radio" name="tab" id="fourteenth">
           <label for="fourteenth"> Existing Apprentice </label>
             <div class="content">
-              <p>Existing Apprentice</p>
                 <!--  Bootstrap table-->
                 <div class="table-responsive">
                     <table class="table table-bordered" id="app_table">
-                        <thead>
+                      <form action="" method="">
                           <tr>
-                            <th scope="row" hidden>#</th>
+                            <th scope="row" hidden></th>
+                            <th hidden></th>
                               <th style="width: 20%;">Name</th>
                               <th>IC Number</th>
-                              <th>I-Ready (Y/N)</th>
+                              <th>I-Ready (Yes/No)</th>
                               <th>Duration</th>
                               <th>Start</th>
                               <th>End</th>
                               <th style="width: 12%;">Qualification</th>
                               <th style="width: 12%;">Skill/Trade</th>
                               <th>Accreditation</th>
-                              <th style="width: 3%;"></th>
                             </tr>
-                        </thead>
-                        <tbody id="appbody">
+                       
                           <tr>
-                            <th scope="row" hidden>1</th>
+                            <td hidden><input type="text" class="form-control shadow-none" name="id" value="<%= id %>"></td>
+                            <td hidden><input type="text" class="form-control shadow-none" name="v_id" value="<%= v_id %>"></td>
                               <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
-                            <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
+                            <td><input type="text" class="form-control shadow-none" name="ic" id="ic"></td>
                             <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
                             <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
                             <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
                             <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
                             <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
-                            <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
+                            <td><input type="text" class="form-control shadow-none" name="skilltrade" id="skill"></td>
                             <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td></td>
                           </tr>
-                          <tr id="approw" class="d-none">
-                            <th scope="row" hidden>1</th>
-                              <td><input type="text" class="form-control shadow-none" name="fullname" id="fullname"></td>
-                            <td><input type="number" class="form-control shadow-none" name="ic" id="ic"></td>
-                            <td><input type="text" class="form-control shadow-none" name="iready" id="iready"></td>
-                            <td><input type="text" class="form-control shadow-none" name="duration" id="duration"></td>
-                            <td><input type="date" class="form-control shadow-none" name="start" id="start"></td>
-                            <td><input type="date" class="form-control shadow-none" name="end" id="end"></td>
-                            <td><input type="text" class="form-control shadow-none" name="qualification" id="qualification"></td>
-                            <td><input type="text" class="form-control shadow-none" name="skill" id="skill"></td>
-                            <td><input type="text" class="form-control shadow-none" name="accreditation" id="accreditation"></td>
-                            <td class="text-center"><button class="btn btn-md btn-danger rounded-0" title="" onclick="DelApprentice(this)"><i class="fa fa-trash"></i></button></td>
+                          <tr>
+                            <td colspan="9">
+                              <div class="text-right">
+                            <button type="submit" class="btn btn-md btn-warning">Submit</button>
+                          </div>
+                            </td>
                           </tr>
-                        </tbody>
+                        </form>
                     </table>
                   </div>
-                    <div class="text-right">
-                      <button type="button" class="btn btn-md btn-warning" onclick="AddApprentice()">Add New Row</button>
-                      <a class="btn btn-warning btn-md" id="" href="#">Submit</a>
-                    </div>
             </div>
           </li>
           </ul>
           <div class="text-right">
-            <a href="#" class="btn btn-lg" id="signbutton" value="Submit">Summary</a>
+            <a href="summary.html" class="btn btn-lg" id="signbutton" value="Submit">Summary</a>
           </div>
 
-          <script>
-
-            //Function for adding new row
-            function AddApprentice()
-            {
-                /*Add Button*/
-                var v = $("#approw").clone().appendTo("#appbody") ;
-                $(v).find("input").val('');
-                $(v).removeClass("d-none");
-                $(v).find("th").first().html($('appbody tr').length - 1);
-            }
-            //End of adding new row function
-            
-            //Function for deleting existing row
-            function DelApprentice(v)
-            {
-                /*Delete Button*/
-                   $(v).parent().parent().remove(); 
-            
-                    $("#appbody").find("tr").each(
-                    function(index)
-                    {
-                       $(this).find("th").first().html(index);
-                    }
-            
-                   );
-            }
-            //End of deleting existing row function
-           
-            
-                </script>
                   </div>
                     </div><!--/.card-body -->
                 </div><!--/.card-->
@@ -1538,7 +989,6 @@ function menuBtnChange() {
         </div> <!--End of Card Body-->
       </div> <!--End of Card-->
       </div> <!--End of Container-->
-    </form> <!--End of Form-->
       <br>
     </section>
 

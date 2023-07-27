@@ -427,18 +427,26 @@ table{
 
 #force_table{
   overflow-x: scroll;
-  width: 930px;
+  width: 900px;
   margin: 5px auto;
+}
+
+#hire_table{
+  overflow-x: scroll;
+  width: 1900px;
+  margin: 5px auto;
+  font-size: 8px;
 }
 
 #leavers_table{
   overflow-x: scroll;
-  width: 930px;
+  width: 900px;
+  margin: 5px auto;
 }
 
 #content_table{
   overflow-x: scroll;
-  width: 930px;
+  width: 100%;
   margin: 8px auto;
 }
 
@@ -451,6 +459,12 @@ table{
 #spend_table{
   overflow-x: scroll;
   width: 100%;
+  margin: 8px auto;
+}
+
+#form_table{
+  overflow-x: scroll;
+  width: 1700;
   margin: 8px auto;
 }
 
@@ -473,4 +487,13 @@ table{
 
 #signbutton:hover{
   background-color: #D42E12;
+}
+
+#summary{
+  width: 1200px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 4px 4px 5px -1px #747681,
+  -4px -4px 5px -1px #A7A9AC;
+
 }
